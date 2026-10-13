@@ -7,14 +7,15 @@ edit_uri: "tree/main/docs"
 #   /html_documents/
 #   /notebooks/
 nav:
-  - Home: index.md
-  - "How to use with Docker?": how_to_use_w_docker.md
+  - "citydb-3dtiler": index.md
+  - "CLI Overview": cli.md
   - "How to use with VEnv?": how_to_use_w_venv.md
   - "All Commands & Samples": all_commands_samples.md
-  - "Tips for Docker usage" : tips_for_docker_usage.md
   - "Test Procedures & Tilesets" : test_procedures.md
   - "Documentation for Developers" : developer_docs.md
   - "Example Commands for Advanced Users" : samples_4_advanced.md
+  - "ex_home" : ex_index.md
+  - "citydb-3dtiler Docker": docker.md
 theme: 
   name: material
   logo: ./images/citydb_logo.png
@@ -70,12 +71,16 @@ markdown_extensions:
       pygments_lang_class: true
   - pymdownx.superfences
   - pymdownx.inlinehilite
-  - pymdownx.snippets
+  - pymdownx.snippets:
+      auto_append:
+        - includes/abbreviations.md
   - pymdownx.tasklist:
       clickable_checkbox: true
   - pymdownx.tabbed:
       alternate_style: true
 plugins:
+  - tags:
+      tags: true
   - plantuml:
       puml_url: https://www.plantuml.com/plantuml/
 
