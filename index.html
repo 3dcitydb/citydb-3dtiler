@@ -6,13 +6,15 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="Introduction to citydb-3dtiler">
+      
       
       
         <link rel="canonical" href="https://tum-gis.github.io/citydb-3dtiler/">
       
       
       
-        <link rel="next" href="how_to_use_w_docker/">
+        <link rel="next" href="cli/">
       
       
         
@@ -23,7 +25,7 @@
     
     
       
-        <title>citydb-3dtiler</title>
+        <title>citydb-3dtiler - citydb-3dtiler</title>
       
     
     
@@ -80,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#citydb-3dtiler" class="md-skip">
+        <a href="#key-features" class="md-skip">
           Skip to content
         </a>
       
@@ -115,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              citydb-3dtiler
             
           </span>
         </div>
@@ -226,8 +228,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -236,7 +236,7 @@
   <span class="md-ellipsis">
     
   
-    Home
+    citydb-3dtiler
   
 
     
@@ -254,7 +254,7 @@
   <span class="md-ellipsis">
     
   
-    Home
+    citydb-3dtiler
   
 
     
@@ -270,8 +270,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -280,10 +278,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#documentation" class="md-nav__link">
+  <a href="#key-features" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Documentation
+        Key features
       
     </span>
   </a>
@@ -298,6 +296,78 @@
       
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-launching" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installing &amp; launching
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installing &amp; launching">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-customization-of-the-materials-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step-1 : Customization of the Materials (Optional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-export-as-csv-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step-2 : Export as CSV (Optional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-start-the-terminalshell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step-3 : Start the Terminal/Shell
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-take-an-advice-for-the-dataset-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step-4 : Take an Advice for the Dataset (Optional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-generate-the-3dtiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step-5 Generate the 3DTiles
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -316,14 +386,41 @@
   
   
     <li class="md-nav__item">
-      <a href="how_to_use_w_docker/" class="md-nav__link">
+      <a href="cli/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    How to use with Docker?
+    CLI Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="db_con_options/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Database Connection Options
   
 
     
@@ -378,33 +475,6 @@
     
   
     All Commands & Samples
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="tips_for_docker_usage/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Tips for Docker usage
   
 
     
@@ -498,6 +568,62 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ex_index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ex_home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="docker/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.81 10.25c-.06-.04-.56-.43-1.64-.43-.28 0-.56.03-.84.08-.21-1.4-1.38-2.11-1.43-2.14l-.29-.17-.18.27c-.24.36-.43.77-.51 1.19-.2.8-.08 1.56.33 2.21-.49.28-1.29.35-1.46.35H2.62c-.34 0-.62.28-.62.63 0 1.15.18 2.3.58 3.38.45 1.19 1.13 2.07 2 2.61.98.6 2.59.94 4.42.94.79 0 1.61-.07 2.42-.22 1.12-.2 2.2-.59 3.19-1.16A8.3 8.3 0 0 0 16.78 16c1.05-1.17 1.67-2.5 2.12-3.65h.19c1.14 0 1.85-.46 2.24-.85.26-.24.45-.53.59-.87l.08-.24zm-17.96.99h1.76c.08 0 .16-.07.16-.16V9.5c0-.08-.07-.16-.16-.16H3.85c-.09 0-.16.07-.16.16v1.58c.01.09.07.16.16.16m2.43 0h1.76c.08 0 .16-.07.16-.16V9.5c0-.08-.07-.16-.16-.16H6.28c-.09 0-.16.07-.16.16v1.58c.01.09.07.16.16.16m2.47 0h1.75c.1 0 .17-.07.17-.16V9.5c0-.08-.06-.16-.17-.16H8.75c-.08 0-.15.07-.15.16v1.58c0 .09.06.16.15.16m2.44 0h1.77c.08 0 .15-.07.15-.16V9.5c0-.08-.06-.16-.15-.16h-1.77c-.08 0-.15.07-.15.16v1.58c0 .09.07.16.15.16M6.28 9h1.76c.08 0 .16-.09.16-.18V7.25c0-.09-.07-.16-.16-.16H6.28c-.09 0-.16.06-.16.16v1.57c.01.09.07.18.16.18m2.47 0h1.75c.1 0 .17-.09.17-.18V7.25c0-.09-.06-.16-.17-.16H8.75c-.08 0-.15.06-.15.16v1.57c0 .09.06.18.15.18m2.44 0h1.77c.08 0 .15-.09.15-.18V7.25c0-.09-.07-.16-.15-.16h-1.77c-.08 0-.15.06-.15.16v1.57c0 .09.07.18.15.18m0-2.28h1.77c.08 0 .15-.07.15-.16V5c0-.1-.07-.17-.15-.17h-1.77c-.08 0-.15.06-.15.17v1.56c0 .08.07.16.15.16m2.46 4.52h1.76c.09 0 .16-.07.16-.16V9.5c0-.08-.07-.16-.16-.16h-1.76c-.08 0-.15.07-.15.16v1.58c0 .09.07.16.15.16"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    citydb-3dtiler Docker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -515,8 +641,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -525,10 +649,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#documentation" class="md-nav__link">
+  <a href="#key-features" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Documentation
+        Key features
       
     </span>
   </a>
@@ -543,6 +667,78 @@
       
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-launching" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installing &amp; launching
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installing &amp; launching">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-customization-of-the-materials-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step-1 : Customization of the Materials (Optional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-export-as-csv-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step-2 : Export as CSV (Optional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-start-the-terminalshell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step-3 : Start the Terminal/Shell
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-take-an-advice-for-the-dataset-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step-4 : Take an Advice for the Dataset (Optional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-generate-the-3dtiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step-5 Generate the 3DTiles
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -561,66 +757,203 @@
                 
                   
 
+  <nav class="md-tags" >
+    
+      
+      
+      
+      
+        <span class="md-tag">citydb-3dtiler</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">features</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">overview</span>
+      
+    
+  </nav>
+
 
   
   
 
 
-<h1 id="citydb-3dtiler">citydb-3dtiler</h1>
+  <h1>citydb-3dtiler</h1>
+
 <div class="admonition warning">
 <p class="admonition-title">This application is in the testing phase</p>
 <p>This application is still in the testing phase. Please exercise caution when using it in production. Therefore, feedback is always welcome. Please feel free to create an issue on the GitHub page or contact me: murat.kendir(At)tum.de</p>
 </div>
-<p><strong>citydb-3dtiler</strong> can generate 3DTiles (v 1.0 and 1.1) by reading features (aka. city objects) from 3DCityDB (v5.x), a database application that can import CityGML 2.0 or 3.0-based datasets. The application's key features are as follows:</p>
-<ul>
-<li>It can generate reports about the current data in the database or calculate the most efficient configuration parameters for creating 3D Tiles.</li>
-<li>It can assign colors or PBR materials based on object classes or the current property values of features.</li>
-<li>It can create separate 3DTiles based on object classes (other options planned).</li>
-<li>Tilesets can be customized with a simple CSV file listing materials.</li>
-</ul>
-<div class="admonition info">
-<p class="admonition-title">Links for relevant libraries</p>
-<ul>
-<li>3DCityDB: <a href="https://docs.3dcitydb.org/edge/" target="_blank">docs.3dcitydb.org/edge</a></li>
-<li>pg2b3dm: <a href="https://github.com/Geodan/pg2b3dm" target="_blank">github.com/Geodan/pg2b3dm</a></li>
-</ul>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Features Not Yet Supported</p>
-<ul>
-<li>Feature Textures</li>
-<li>Implicit Features (Features represented within local coordinate systems)</li>
-</ul>
-</div>
+<p><code>citydb-3dtiler</code> can generate 3DTiles (v 1.0 and 1.1) by reading features (aka. city objects) from 3DCityDB (v5.x), a database application that can import CityGML 2.0 or 3.0-based datasets. The application's key features are as follows:</p>
 <figure style="width:%100;text-align: center;">
   <img src="images/sample_3dtiles_leipzig.jpg" alt="Sample 3DTiles from Leipzig" style="border:3px solid #4CAE4F">
   <figcaption>A 3DTiles sample represents the city objects of Leipzig city</figcaption>
 </figure>
 
-<h2 id="documentation">Documentation</h2>
+<h2 id="key-features">Key features</h2>
 <ul>
-<li><a href="how_to_use_w_docker/">How to use with Docker?</a></li>
-<li><a href="how_to_use_w_venv/">How to use with VENV?</a></li>
-<li><a href="all_commands_samples/">All Commands &amp; Samples</a></li>
-<li><a href="tips_for_docker_usage/">Tips for Docker Usage</a></li>
-<li><a href="test_procedures/">Test Procedures &amp; Sample Tilesets</a></li>
-<li><a href="developer_docs/">Documentation for the Developers</a></li>
-<li><a href="samples_4_advanced/">Example Commands for Advanced Users</a></li>
+<li>creates singular or separate 3DTiles (based on object classes) by reading the features from the 3DCityDBv5.</li>
+<li>generates report (advice.yml) about the existing data in the database and/or calculate the most efficient configuration parameters for creating 3D Tiles.</li>
+<li>can assign simple colors or PBR materials based on object classes or the specified property values of features.</li>
+<li>The PBR Materials of the 3D Tilesets can be customized with a CSV file by listing objectclasses and properties.</li>
+<li>features can be filtered using SQL or CQL2 expressions</li>
+<li>filters the features using different criterias such as id, limit, start-index, boundary box or type-name (object class)</li>
+<li>filters the relevant attributes and can flatten the structure of complex attributes (such as con:Height)</li>
+<li>supports 3DTiles v1.0 and v1.1</li>
 </ul>
 <h2 id="special-thanks">Special Thanks</h2>
 <p>This application is based on two important concepts and aims to bridge the gap between the concepts 3DTiles and CityGML.
-To bridge this gap, two main elements have been used in this software:</p>
-<ol>
-<li>3DCityDB v5</li>
-<li>pg2b3dm</li>
-</ol>
+To bridge this gap, two main elements have been used in this software: <a href="https://docs.3dcitydb.org/edge/" target="_blank">3DCityDB v5</a>, <a href="https://github.com/Geodan/pg2b3dm" target="_blank">pg2b3dm</a></p>
 <p><strong><em>We would like to take this opportunity to thank Bert Temme, the developer of the pg2b3dm library, and all 3DCityDB developers.</em></strong></p>
+<h2 id="installing-launching">Installing &amp; launching</h2>
+<p>There are two different ways to use citydb-3dtiler: using Docker containers and setting up a Python environment on your computer to run the application. Both methods are explained in more detail on the relevant pages (How to use with Docker, How to use with Python Env). Below, Docker usage will be explained with only the fundamental steps.</p>
+<h3 id="step-1-customization-of-the-materials-optional">Step-1 : Customization of the Materials (Optional)</h3>
+<details class="tip">
+<summary>If you do not want to customize</summary>
+<p>If you do not want to customize the feature colors (materials), proceed to Step 4. Otherwise, follow the next instructions.</p>
+</details>
+<p>Download and customize the "materials_for_features" file with one of office software (LibreOffice, OpenOffice or OnlyOffice) by changing the color values in the first sheet (sheet name: "materials").
+<a href="https://github.com/tum-gis/citydb-3dtiler/blob/main/materials_for_features/materials_for_features.ods" target="_blank">materials_for_features.ods</a></p>
+<h3 id="step-2-export-as-csv-optional">Step-2 : Export as CSV (Optional)</h3>
+<p>Save only the first sheet (materials) as a CSV file. </p>
+<details class="warning">
+<summary>Pay attention to the following issues</summary>
+<p>While exporting the table as CSV file : </br>
+- Field delimiters must be commas (,) </br>
+- Do not force text to be quoted with apostrophes (")</p>
+</details>
+<h3 id="step-3-start-the-terminalshell">Step-3 : Start the Terminal/Shell</h3>
+<p>Using your preferred CLI tool (Terminal/Shell), navigate to the same folder with the materials_for_features.csv. You can use the <code>cd &lt;FOLDERNAME&gt;</code> command to navigate to the folder.</p>
+<h3 id="step-4-take-an-advice-for-the-dataset-optional">Step-4 : Take an Advice for the Dataset (Optional)</h3>
+<p>(Optional) Create an advice file using the software. This advice file will summarize the existing object classes in your database and calculate the maximum features per tile.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Powershell</label><label for="__tabbed_1_2">Linux Terminal</label><label for="__tabbed_1_3">Command Prompt (CMD)</label><label for="__tabbed_1_4">Sample Command</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">docker</span> <span class="n">run</span> <span class="p">`</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="p">-</span><span class="n">-rm</span> <span class="p">-</span><span class="n">-interactive</span> <span class="p">-</span><span class="n">-tty</span> <span class="p">`</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">-</span><span class="n">-name</span> <span class="n">citydb</span><span class="p">-</span><span class="n">3dtiler</span> <span class="p">`</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">-</span><span class="n">-volume</span> <span class="p">./:/</span><span class="n">home</span><span class="p">/</span><span class="n">tester</span><span class="p">/</span><span class="n">citydb</span><span class="p">-</span><span class="n">3dtiler</span><span class="p">/</span><span class="n">shared</span><span class="p">:</span><span class="n">rw</span> <span class="p">`</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">ghcr</span><span class="p">.</span><span class="n">io</span><span class="p">/</span><span class="n">tum-gis</span><span class="p">/</span><span class="n">citydb</span><span class="p">-</span><span class="n">3dtiler</span><span class="p">:</span><span class="n">latest</span> <span class="p">`</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">-</span><span class="n">-db-host</span> <span class="p">&lt;</span><span class="n">IP</span><span class="o">-or</span><span class="n">-COMP-NAME</span><span class="p">&gt;</span> <span class="p">-</span><span class="n">-db-port</span> <span class="p">&lt;</span><span class="n">PORT-NUMBER</span><span class="p">&gt;</span> <span class="p">`</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">-</span><span class="n">-db-name</span> <span class="p">&lt;</span><span class="n">DATABASE-NAME</span><span class="p">&gt;</span> <span class="p">-</span><span class="n">-db-schema</span> <span class="p">&lt;</span><span class="n">SCHEMA-NAME</span><span class="p">&gt;</span> <span class="p">`</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="p">-</span><span class="n">-db-username</span> <span class="p">&lt;</span><span class="n">USER-NAME</span><span class="p">&gt;</span> <span class="p">-</span><span class="n">-db-password</span> <span class="p">&lt;</span><span class="n">DATABASE-PASSWORD</span><span class="p">&gt;</span> <span class="p">`</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="n">advise</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>docker<span class="w"> </span>run<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>--rm<span class="w"> </span>--interactive<span class="w"> </span>--tty<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>--name<span class="w"> </span>citydb-3dtiler<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>--volume<span class="w"> </span>./:/home/tester/citydb-3dtiler/shared:rw<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>ghcr.io/tum-gis/citydb-3dtiler:latest<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>--db-host<span class="w"> </span>&lt;IP-or-COMP-NAME&gt;<span class="w"> </span>--db-port<span class="w"> </span>&lt;PORT-NUMBER&gt;<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>--db-name<span class="w"> </span>&lt;DATABASE-NAME&gt;<span class="w"> </span>--db-schema<span class="w"> </span>&lt;SCHEMA-NAME&gt;<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>--db-username<span class="w"> </span>&lt;USER-NAME&gt;<span class="w"> </span>--db-password<span class="w"> </span>&lt;DATABASE-PASSWORD&gt;<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>advise
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>docker<span class="w"> </span>run<span class="w"> </span>^
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>--rm<span class="w"> </span>--interactive<span class="w"> </span>--tty<span class="w"> </span>^
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>--name<span class="w"> </span>citydb-3dtiler<span class="w"> </span>^
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>--volume<span class="w"> </span>./:/home/tester/citydb-3dtiler/shared:rw<span class="w"> </span>^
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>ghcr.io/tum-gis/citydb-3dtiler:latest<span class="w"> </span>^
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>--db-host<span class="w"> </span>&lt;IP-or-COMP-NAME&gt;<span class="w"> </span>--db-port<span class="w"> </span>&lt;PORT-NUMBER&gt;<span class="w"> </span>^
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>--db-name<span class="w"> </span>&lt;DATABASE-NAME&gt;<span class="w"> </span>--db-schema<span class="w"> </span>&lt;SCHEMA-NAME&gt;<span class="w"> </span>^
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>--db-username<span class="w"> </span>&lt;USER-NAME&gt;<span class="w"> </span>--db-password<span class="w"> </span>&lt;DATABASE-PASSWORD&gt;<span class="w"> </span>^
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>advise
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>docker<span class="w"> </span>run<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>--rm<span class="w"> </span>--interactive<span class="w"> </span>--tty<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>--name<span class="w"> </span>citydb-3dtiler<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>--volume<span class="w"> </span>./:/home/tester/citydb-3dtiler/shared:rw<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>ghcr.io/tum-gis/citydb-3dtiler:latest<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>--db-host<span class="w"> </span><span class="m">10</span>.162.246.888<span class="w"> </span>--db-port<span class="w"> </span><span class="m">9876</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>--db-name<span class="w"> </span>citydb-visualizer<span class="w"> </span>--db-schema<span class="w"> </span>citydb<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>--db-username<span class="w"> </span>tester2<span class="w"> </span>--db-password<span class="w"> </span>louvre<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>advise
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="step-5-generate-the-3dtiles">Step-5 Generate the 3DTiles</h3>
+<p>Generate 3DTiles using the default configuration by typing the following command: </p>
+<details class="info">
+<summary>How the application checks the material file?</summary>
+<p>The program automatically checks whether the “materials_for_features.csv” file is present in the current folder. If the file is not present in the current folder, it uses the predefined materials stored internally (in the Docker image). If you have renamed the file, you can use the “--custom-style” argument after the ‘tile’ command.</p>
+</details>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:4"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><input id="__tabbed_2_4" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Powershell</label><label for="__tabbed_2_2">Linux Terminal</label><label for="__tabbed_2_3">Command Prompt (CMD)</label><label for="__tabbed_2_4">Sample Command</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">docker</span> <span class="n">run</span> <span class="p">`</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="p">-</span><span class="n">-rm</span> <span class="p">-</span><span class="n">-interactive</span> <span class="p">-</span><span class="n">-tty</span> <span class="p">`</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="p">-</span><span class="n">-name</span> <span class="n">citydb</span><span class="p">-</span><span class="n">3dtiler</span> <span class="p">`</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="p">-</span><span class="n">-volume</span> <span class="p">./:/</span><span class="n">home</span><span class="p">/</span><span class="n">tester</span><span class="p">/</span><span class="n">citydb</span><span class="p">-</span><span class="n">3dtiler</span><span class="p">/</span><span class="n">shared</span><span class="p">:</span><span class="n">rw</span> <span class="p">`</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="n">ghcr</span><span class="p">.</span><span class="n">io</span><span class="p">/</span><span class="n">tum-gis</span><span class="p">/</span><span class="n">citydb</span><span class="p">-</span><span class="n">3dtiler</span><span class="p">:</span><span class="n">latest</span> <span class="p">`</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="p">-</span><span class="n">-db-host</span> <span class="p">&lt;</span><span class="n">IP</span><span class="o">-or</span><span class="n">-COMP-NAME</span><span class="p">&gt;</span> <span class="p">-</span><span class="n">-db-port</span> <span class="p">&lt;</span><span class="n">PORT-NUMBER</span><span class="p">&gt;</span> <span class="p">`</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="p">-</span><span class="n">-db-name</span> <span class="p">&lt;</span><span class="n">DATABASE-NAME</span><span class="p">&gt;</span> <span class="p">-</span><span class="n">-db-schema</span> <span class="p">&lt;</span><span class="n">SCHEMA-NAME</span><span class="p">&gt;</span> <span class="p">`</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="p">-</span><span class="n">-db-username</span> <span class="p">&lt;</span><span class="n">USER-NAME</span><span class="p">&gt;</span> <span class="p">-</span><span class="n">-db-password</span> <span class="p">&lt;</span><span class="n">DATABASE-PASSWORD</span><span class="p">&gt;</span> <span class="p">`</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="n">tile</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>docker<span class="w"> </span>run<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>--rm<span class="w"> </span>--interactive<span class="w"> </span>--tty<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>--name<span class="w"> </span>citydb-3dtiler<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>--volume<span class="w"> </span>./:/home/tester/citydb-3dtiler/shared:rw<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>ghcr.io/tum-gis/citydb-3dtiler:latest<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>--db-host<span class="w"> </span>&lt;IP-or-COMP-NAME&gt;<span class="w"> </span>--db-port<span class="w"> </span>&lt;PORT-NUMBER&gt;<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>--db-name<span class="w"> </span>&lt;DATABASE-NAME&gt;<span class="w"> </span>--db-schema<span class="w"> </span>&lt;SCHEMA-NAME&gt;<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>--db-username<span class="w"> </span>&lt;USER-NAME&gt;<span class="w"> </span>--db-password<span class="w"> </span>&lt;DATABASE-PASSWORD&gt;<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>tile
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>docker<span class="w"> </span>run<span class="w"> </span>^
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>--rm<span class="w"> </span>--interactive<span class="w"> </span>--tty<span class="w"> </span>^
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>--name<span class="w"> </span>citydb-3dtiler<span class="w"> </span>^
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>--volume<span class="w"> </span>./:/home/tester/citydb-3dtiler/shared:rw<span class="w"> </span>^
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>ghcr.io/tum-gis/citydb-3dtiler:latest<span class="w"> </span>^
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>--db-host<span class="w"> </span>&lt;IP-or-COMP-NAME&gt;<span class="w"> </span>--db-port<span class="w"> </span>&lt;PORT-NUMBER&gt;<span class="w"> </span>^
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>--db-name<span class="w"> </span>&lt;DATABASE-NAME&gt;<span class="w"> </span>--db-schema<span class="w"> </span>&lt;SCHEMA-NAME&gt;<span class="w"> </span>^
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>--db-username<span class="w"> </span>&lt;USER-NAME&gt;<span class="w"> </span>--db-password<span class="w"> </span>&lt;DATABASE-PASSWORD&gt;<span class="w"> </span>^
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>tile
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>docker<span class="w"> </span>run<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>--rm<span class="w"> </span>--interactive<span class="w"> </span>--tty<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>--name<span class="w"> </span>citydb-3dtiler<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>--volume<span class="w"> </span>./:/home/tester/citydb-3dtiler/shared:rw<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>ghcr.io/tum-gis/citydb-3dtiler:latest<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>--db-host<span class="w"> </span><span class="m">10</span>.162.246.888<span class="w"> </span>--db-port<span class="w"> </span><span class="m">9876</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>--db-name<span class="w"> </span>citydb-visualizer<span class="w"> </span>--db-schema<span class="w"> </span>citydb<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>--db-username<span class="w"> </span>tester2<span class="w"> </span>--db-password<span class="w"> </span>louvre<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>tile
+</span></code></pre></div>
+</div>
+</div>
+</div>
 
 
 
 
 
 
+
+  
+  
 
 
 
