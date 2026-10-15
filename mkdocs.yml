@@ -9,6 +9,7 @@ edit_uri: "tree/main/docs"
 nav:
   - "citydb-3dtiler": index.md
   - "CLI Overview": cli.md
+  - "Database Connection Options" : db_con_options.md
   - "How to use with VEnv?": how_to_use_w_venv.md
   - "All Commands & Samples": all_commands_samples.md
   - "Test Procedures & Tilesets" : test_procedures.md
