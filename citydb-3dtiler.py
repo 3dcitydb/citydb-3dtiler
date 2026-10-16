@@ -31,7 +31,7 @@ def main():
 
     # Advise command uses it"s own arguments
     parser_advise = subparsers.add_parser("advise", help="generates advisement docs for the existing dataset.")
-    parser_advise.add_argument("--consider-thematic-features", action=argparse.BooleanOptionalAction, default=False)
+    parser_advise.add_argument("--ignore-thematic-features", action=argparse.BooleanOptionalAction, default=False)
     #parser_advise.add_argument("--consider-appearances", action=argparse.BooleanOptionalAction, default=False)
     parser_advise.add_argument("-o", "--output-file", metavar="Output File Name", nargs="?", default="advice.yml")
     

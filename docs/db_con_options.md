@@ -1,13 +1,13 @@
 ---
-# title: Database Conenction Options
-description: The options might be used to connect to the database
+# title: Database Connection Options
+description: The options must be used to connect to the database
 tags:
   - database
   - citydb-3dtiler
   - postgresql
 ---
 
-# Database Conenction Options
+# Database Connection Options
 
 This section lists the options that can be used to connect to the 3DCityDB (v5.x) database.
 

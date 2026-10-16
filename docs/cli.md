@@ -34,7 +34,7 @@ citydb-3dtiler is the main command of the application. When run with the Docker 
 | [--tilers-path](#tilers-path) | sets the absolute/relative path of the selected 3D Tile Generator software. | tiler_app/ |
 | [--separate-tilesets](#separate-tilesets) | exports separate tilesets for each objectclass or namespace |  |
 | [(Database Connection Options)](./db_con_options.md) | This group is expressed as a placeholder to collectively represent the options used for configuring database connections. |  |
-| (Filter Options) | This group is expressed as a placeholder to collectively represent the options used for filtering the existing features. |  |
+| [(Filter Options)](./filters.md) | This group is expressed as a placeholder to collectively represent the options used for filtering the existing features. |  |
 
 ??? tip "Check all the subcommands and the options in one diagram"
     If you want to see all the subcommands and the options with possible arguments in one diagram, visit this page : [citydb-3dtiler Functionality Matrix](functionality_matrix.md)
@@ -69,9 +69,9 @@ This option is used to specify the criteria for creating multiple tilesets. You 
 
 | **Command** | **Description** |
 |---|---|
-| help | The help output shows the usage syntax and available arguments. |
-| advise | Test connection to the database. |
-| tile | Show database contents and summary information. |
+| [help](#usage-syntax) | The help output shows the usage syntax and available arguments. |
+| [advise](./advise.md) | Test connection to the database. |
+| [tile](./tile.md) | Show database contents and summary information. |
 
 ## Usage Syntax
 

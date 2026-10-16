@@ -15,12 +15,12 @@ nav:
   - "tile Command" : tile.md
   - "Sample Commands & Tests" : samples.md
   - "Developer Notes" : dev_notes.md
-  #- "How to use with VEnv?": how_to_use_w_venv.md
-  #- "All Commands & Samples": all_commands_samples.md
-  #- "Test Procedures & Tilesets" : test_procedures.md
-  #- "Documentation for Developers" : developer_docs.md
-  #- "Example Commands for Advanced Users" : samples_4_advanced.md
-  #- "ex_home" : ex_index.md
+  - "How to use with VEnv?": how_to_use_w_venv.md
+  - "All Commands & Samples": all_commands_samples.md
+  - "Test Procedures & Tilesets" : test_procedures.md
+  - "Documentation for Developers" : developer_docs.md
+  - "Example Commands for Advanced Users" : samples_4_advanced.md
+  - "ex_home" : ex_index.md
   - "citydb-3dtiler Docker": docker.md
 theme: 
   name: material
