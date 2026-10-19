@@ -1,5 +1,7 @@
+# Infrastructure of the citydb Tools
+
+```puml
 @startuml
-!include ./card-style.puml
 
 skinparam component {
   FontSize 14
@@ -68,3 +70,4 @@ cloud {
 
 }
 @enduml
+```

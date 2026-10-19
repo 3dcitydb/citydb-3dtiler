@@ -78,4 +78,4 @@
 - 03.07.2026
 - [ ] the attributes referred in the CQL2 and SQL filter must be automatically recognized and added to the query. (Not necessary to expose in 3DTiles.)
 - [ ] if user specify the bbox-mode, but not specify the bbox, then a special warning must appear.
-- [ ] attributeName.pro_value usage is not explicit. Try how to use it in SQL-FILTER.
+- [ ] attributeName.pro_value usage is not explicit. Try figure out how to use it in SQL-FILTER.

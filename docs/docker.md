@@ -4,7 +4,7 @@ description: citydb-3dtiler Docker documentation and usage examples
 icon: material/docker
 tags:
   - docker
-  - citydb-3dtiler
+  - citydb-3dtile
 ---
 
 # How to use with Docker?

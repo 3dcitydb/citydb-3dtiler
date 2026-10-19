@@ -36,7 +36,7 @@ To bridge this gap, two main elements have been used in this software: [3DCityDB
 
 ***We would like to take this opportunity to thank Bert Temme, the developer of the pg2b3dm library, and all 3DCityDB developers.***
 
-## Installing & launching
+## Simple Usage (via Docker)
 
 
 There are two different ways to use citydb-3dtiler: using Docker containers and setting up a Python environment on your computer to run the application. Both methods are explained in more detail on the relevant pages (How to use with Docker, How to use with Python Env). Below, Docker usage will be explained with only the fundamental steps.

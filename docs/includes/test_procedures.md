@@ -2,6 +2,8 @@
 
 ## Test Procedures Diagram
 
+This diagram shows the list of test procedures to be carried out in order to perform an internal quality check or to prevent function loss during developments.
+
 ```puml
 @startmindmap
 title Test Procedure of citydb-3dtiler application
@@ -141,7 +143,10 @@ endlegend
 @endmindmap
 ```
 
-## Former Tests
+## Previous Tests
+
+The following list contains the links of the previous tests carried out by following the test procedures.
+Test procedures are usually handled before publishing a new release.
 
 - Before release 0.9.3
     - [Tests done with Swisstopo dataset](https://www.3dcitydb.net/3dcitydb/fileadmin/public/kendir/#bern_full_procedure){:target="_blank"}

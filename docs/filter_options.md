@@ -5,24 +5,25 @@ tags:
   - filter
   - citydb-3dtiler
   - cql2
+  - sql
 ---
 
 # Filter Options
 
 This section lists the options that can be used to filter objects with respect to different aspects.
 
-## limit
+## --limit
 
 It can be used to specify a limit number to reduce the selected features.
 
-## start-index
+## --start-index
 
 It can be used to specify the starting index (Offset) of the selected features.
 
 ??? tip "What kind of order is considered while using start-index?"
     The order considered when using `--start-index` is the existing order in the `feature` table in the database. This order may not match the order of features within the file you are importing.
 
-## id (-i)
+## --id (-i)
 
 ID number (`citydb.feature.objectid` in the database) of a specific feature or ID numbers of a bunch of features. 
 
@@ -30,7 +31,7 @@ Use comma as id number separator for multiple inputs and do not add space charac
 
 - Example :  `--id 9876,1234,8765,2345`
 
-## type-name (-t)
+## --type-name (-t)
 
 Type name of the features or a set of type names (aka ObjectClass). 
 
@@ -38,7 +39,7 @@ Use comma as type name separator for multiple inputs and do not add space charac
 
 - Example : `--type-name WallSurface,RoofSurfaceSurface,GroundSurface`
 
-## bbox (-b)
+## --bbox (-b)
 
 A bounding box element containing the x_min, y_min, x_max, y_max, and SRID values, to be used as the filtering geometry. Use comma as separator and do not add space character between the min/max values.
 
@@ -50,7 +51,7 @@ A bounding box element containing the x_min, y_min, x_max, y_max, and SRID value
 ??? tip "SRID Values"
     If you are not sure about the CRS/SRS value of your dataset, you can search for the term `srsName` in the imported file or check the data in the `database_srs` table within the citydb schema in your database. The given SRID value must be a predefined CRS Code available in [EPSG.io](https://epsg.io).
 
-## bbox-mode
+## --bbox-mode
 
 This option can used to specify the method of the boundary box usage as the filtering geometry. There four options to select:
 
@@ -68,7 +69,7 @@ This option can used to specify the method of the boundary box usage as the filt
 
 - Example : `--bbox 564822,5932935,566924,5934737,25832 --bbox-mode intersects-precise`
 
-## filter (-f)
+## --filter (-f)
 
 CQL2 filter expression. 
 
@@ -83,7 +84,7 @@ Use the attribute names listed in the advise.yml file exactly as they are writte
 ??? tip "What if spatial operator fails against 3D geometries?"
     If the selected spatial operator does not work with the 3D geometries, try to use : `'st_envelope(~geom)'`
 
-## sql-filter
+## --sql-filter
 
 The SQL Filter accepts WHERE conditions just as they are written in standard SQL queries. Use '~geom' to refer to the geometry column.
 

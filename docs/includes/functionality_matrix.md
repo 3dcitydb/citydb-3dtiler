@@ -9,6 +9,8 @@ tags:
 
 # citydb-3dtiler Functionality Matrix
 
+Following Diagram show the implemented and planned functionality of the citydb3dtiler application.
+
 ```puml
 @startmindmap
 
