@@ -16,7 +16,7 @@
         <link rel="prev" href="../tile/">
       
       
-        <link rel="next" href="../dev_notes/">
+        <link rel="next" href="../docker/">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>Sample Commands & Tests - citydb-3dtiler</title>
+        <title>Sample Commands - citydb-3dtiler</title>
       
     
     
@@ -83,6 +83,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#samples" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -114,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Sample Commands & Tests
+              Sample Commands
             
           </span>
         </div>
@@ -273,6 +278,33 @@
   
   
     <li class="md-nav__item">
+      <a href="../main_options/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Main Options
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../db_con_options/" class="md-nav__link">
         
   
@@ -280,7 +312,7 @@
   <span class="md-ellipsis">
     
   
-    Database Connection Options
+    Database Connection
   
 
     
@@ -307,7 +339,7 @@
   <span class="md-ellipsis">
     
   
-    Filter Options
+    Filters
   
 
     
@@ -387,6 +419,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sample Commands
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -395,7 +447,7 @@
   <span class="md-ellipsis">
     
   
-    Sample Commands & Tests
+    Sample Commands
   
 
     
@@ -405,195 +457,142 @@
 
       </a>
       
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../dev_notes/" class="md-nav__link">
         
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
-  <span class="md-ellipsis">
+  
     
   
-    Developer Notes
   
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
+        <li class="md-nav__item">
+  <a href="#difference-between-the-docker-and-python-env-usage" class="md-nav__link">
+    <span class="md-ellipsis">
       
+        Difference between the Docker and Python Env. Usage
+      
+    </span>
+  </a>
   
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#help-h-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Help (-h) commands
+      
+    </span>
+  </a>
   
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advise-command-samples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advise command samples
+      
+    </span>
+  </a>
   
-  
-    <li class="md-nav__item">
-      <a href="../how_to_use_w_venv/" class="md-nav__link">
+    <nav class="md-nav" aria-label="Advise command samples">
+      <ul class="md-nav__list">
         
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    How to use with VEnv?
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
+          <li class="md-nav__item">
+  <a href="#take-an-advice-for-the-existing-dataset-to-generate-a-single-tileset" class="md-nav__link">
+    <span class="md-ellipsis">
       
+        Take an advice for the existing dataset to generate a single tileset
       
+    </span>
+  </a>
   
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../all_commands_samples/" class="md-nav__link">
+</li>
         
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    All Commands & Samples
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
+          <li class="md-nav__item">
+  <a href="#take-an-advice-for-the-existing-dataset-to-generate-separate-tilesets" class="md-nav__link">
+    <span class="md-ellipsis">
       
+        Take an advice for the existing dataset to generate separate tilesets
       
+    </span>
+  </a>
   
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../test_procedures/" class="md-nav__link">
+</li>
         
+      </ul>
+    </nav>
   
-  
-  <span class="md-ellipsis">
-    
-  
-    Test Procedures & Tilesets
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
+</li>
       
+        <li class="md-nav__item">
+  <a href="#tile-command-samples" class="md-nav__link">
+    <span class="md-ellipsis">
       
+        Tile command samples
+      
+    </span>
+  </a>
   
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../developer_docs/" class="md-nav__link">
+    <nav class="md-nav" aria-label="Tile command samples">
+      <ul class="md-nav__list">
         
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Documentation for Developers
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
+          <li class="md-nav__item">
+  <a href="#generate-3dtiles-using-property-based-styling" class="md-nav__link">
+    <span class="md-ellipsis">
       
+        Generate 3DTiles using property-based styling
       
+    </span>
+  </a>
   
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../samples_4_advanced/" class="md-nav__link">
+    <nav class="md-nav" aria-label="Generate 3DTiles using property-based styling">
+      <ul class="md-nav__list">
         
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Example Commands for Advanced Users
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
+          <li class="md-nav__item">
+  <a href="#customization-step-how-to-assign-custom-property-values-to-set-the-materialscolors" class="md-nav__link">
+    <span class="md-ellipsis">
       
+        (Customization Step) How to assign custom property values to set the materials/colors?
       
+    </span>
+  </a>
   
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ex_index/" class="md-nav__link">
+</li>
         
+      </ul>
+    </nav>
   
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generating-separated-3dtiles-using-objectclass-based-separation-and-property-based-styling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generating separated 3DTiles using objectclass-based separation and property-based styling
+      
+    </span>
+  </a>
   
-  <span class="md-ellipsis">
-    
+</li>
+        
+      </ul>
+    </nav>
   
-    ex_home
+</li>
+      
+    </ul>
   
-
-    
-  </span>
-  
-  
-
-      </a>
+</nav>
+      
     </li>
   
 
@@ -627,6 +626,33 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dev_notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -644,6 +670,133 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#difference-between-the-docker-and-python-env-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Difference between the Docker and Python Env. Usage
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#help-h-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Help (-h) commands
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advise-command-samples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advise command samples
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advise command samples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#take-an-advice-for-the-existing-dataset-to-generate-a-single-tileset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Take an advice for the existing dataset to generate a single tileset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#take-an-advice-for-the-existing-dataset-to-generate-separate-tilesets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Take an advice for the existing dataset to generate separate tilesets
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tile-command-samples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tile command samples
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tile command samples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generate-3dtiles-using-property-based-styling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generate 3DTiles using property-based styling
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Generate 3DTiles using property-based styling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#customization-step-how-to-assign-custom-property-values-to-set-the-materialscolors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        (Customization Step) How to assign custom property values to set the materials/colors?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generating-separated-3dtiles-using-objectclass-based-separation-and-property-based-styling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generating separated 3DTiles using objectclass-based separation and property-based styling
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -688,9 +841,147 @@
   
 
 
-  <h1>Sample Commands & Tests</h1>
-
-
+<h1 id="samples">Samples</h1>
+<h2 id="difference-between-the-docker-and-python-env-usage">Difference between the Docker and Python Env. Usage</h2>
+<p>There are two main ways to use the citydb-3dtiler application: The first and relatively easier one is to run it inside a container using the Docker image. It does not require any installation other than Docker, but the parameters specified in the documentation must be used. The second way is to set up a Python virtual environment and run the application within that environment. It requires installation, but the commands are shorter. For this reason, we will list the Python commands in the example commands below. If you want to run the example commands below using a Docker container, all you need to do is simply replace the <code>python3 citydb-3dtiler.py</code> expression in the commands with the <code>docker run ...</code> expression.</p>
+<p>Here below there are examples for such a replacement:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Take report within Python setup</label><label for="__tabbed_1_2">Take report using Docker</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>python3<span class="w"> </span>citydb-3dtiler.py<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>--db-host<span class="w"> </span>localhost<span class="w"> </span>--db-port<span class="w"> </span><span class="m">9876</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>--db-name<span class="w"> </span>citydb-visualizer<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>--db-schema<span class="w"> </span>citydb<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>--db-username<span class="w"> </span>tester<span class="w"> </span>--db-password<span class="w"> </span>louvre<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>advise
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>docker<span class="w"> </span>run<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>--rm<span class="w"> </span>--interactive<span class="w"> </span>--tty<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>--name<span class="w"> </span>citydb-3dtiler<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>--volume<span class="w"> </span>./:/home/tester/citydb-3dtiler/shared:rw<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>citydb-3dtiler:latest<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>--db-host<span class="w"> </span>localhost<span class="w"> </span>--db-port<span class="w"> </span><span class="m">9876</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>--db-name<span class="w"> </span>citydb-visualizer<span class="w"> </span>--db-schema<span class="w"> </span>citydb<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>--db-username<span class="w"> </span>tester<span class="w"> </span>--db-password<span class="w"> </span>louvre<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>advise
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<details class="tip">
+<summary>What is the purpose of the backslash (\) character in the code block?</summary>
+<ul>
+<li>When typing commands, the caret (^), backtick (`), and backslash (\) are "escape characters" that tell the computer to handle the next symbol as plain text, not as a command.</li>
+<li>Windows CMD uses ^, PowerShell uses `, and Linux Bash uses \ because each system speaks a slightly different language. </li>
+<li>Alternatively, you can copy these commands into a text editor and delete both the escape characters and the new line characters (\n) to turn the command into a single line.</li>
+</ul>
+</details>
+<h2 id="help-h-commands">Help (-h) commands</h2>
+<p>You can use the help command for both main commands and subcommands.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">General help document</label><label for="__tabbed_2_2">Help doc for advise command</label><label for="__tabbed_2_3">Help doc for tile command</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>python3<span class="w"> </span>citydb-3dtiler.py<span class="w"> </span>--help
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>python3<span class="w"> </span>citydb-3dtiler.py<span class="w"> </span>advise<span class="w"> </span>--help
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>python3<span class="w"> </span>citydb-3dtiler.py<span class="w"> </span>tile<span class="w"> </span>--help
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h2 id="advise-command-samples">Advise command samples</h2>
+<h3 id="take-an-advice-for-the-existing-dataset-to-generate-a-single-tileset">Take an advice for the existing dataset to generate a single tileset</h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>python3<span class="w"> </span>citydb-3dtiler.py<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>--db-host<span class="w"> </span>localhost<span class="w"> </span>--db-port<span class="w"> </span><span class="m">9876</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>--db-name<span class="w"> </span>citydb-visualizer<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>--db-schema<span class="w"> </span>citydb<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>--db-username<span class="w"> </span>tester<span class="w"> </span>--db-password<span class="w"> </span>louvre<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>advise
+</span></code></pre></div>
+<h3 id="take-an-advice-for-the-existing-dataset-to-generate-separate-tilesets">Take an advice for the existing dataset to generate separate tilesets</h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>python3<span class="w"> </span>citydb-3dtiler.py<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>--db-host<span class="w"> </span>localhost<span class="w"> </span>--db-port<span class="w"> </span><span class="m">9876</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>--db-name<span class="w"> </span>citydb-visualizer<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>--db-schema<span class="w"> </span>citydb<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>--db-username<span class="w"> </span>tester<span class="w"> </span>--db-password<span class="w"> </span>louvre<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>--separate-tilesets<span class="w"> </span>objectclass<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>advise
+</span></code></pre></div>
+<h2 id="tile-command-samples">Tile command samples</h2>
+<h3 id="generate-3dtiles-using-property-based-styling">Generate 3DTiles using property-based styling</h3>
+<h4 id="customization-step-how-to-assign-custom-property-values-to-set-the-materialscolors">(Customization Step) How to assign custom property values to set the materials/colors?</h4>
+<p>To set such a color/material set, you have to check the existing properties in your dataset. To see the available properties, you can also check the advice document created by the advise command. However, you still need to find the value sets for the existing dataset. After that you can add the property names and the values to the materials document like below:</p>
+<table>
+<thead>
+<tr>
+<th>namespace of classname</th>
+<th>classname</th>
+<th>namespace of property</th>
+<th>property name</th>
+<th>column name of property value</th>
+<th>property value</th>
+<th>pbr metallic roughness base color</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bldg</td>
+<td>Building</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>#00E5EE80</td>
+</tr>
+<tr>
+<td>bldg</td>
+<td>Building</td>
+<td>bldg</td>
+<td>roofType</td>
+<td>val_string</td>
+<td>flat</td>
+<td>#66DEF3FC</td>
+</tr>
+<tr>
+<td>bldg</td>
+<td>Building</td>
+<td>bldg</td>
+<td>roofType</td>
+<td>val_string</td>
+<td>gabled</td>
+<td>#F35FCBFC</td>
+</tr>
+</tbody>
+</table>
+<details class="info">
+<summary>Style-Modes</summary>
+<p>Default style-mode is objectclass-based. Check the materials_for_features.csv table to view existing objectclasses.</p>
+</details>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="w">    </span>python3<span class="w"> </span>citydb-3dtiler.py<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span>--db-host<span class="w"> </span>localhost<span class="w"> </span>--db-port<span class="w"> </span><span class="m">9876</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span>--db-name<span class="w"> </span>citydb-visualizer<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span>--db-schema<span class="w"> </span>citydb<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">    </span>--db-username<span class="w"> </span>tester<span class="w"> </span>--db-password<span class="w"> </span>louvre<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">    </span>tile<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">    </span>--style-mode<span class="w"> </span>property-based
+</span></code></pre></div>
+<h3 id="generating-separated-3dtiles-using-objectclass-based-separation-and-property-based-styling">Generating separated 3DTiles using objectclass-based separation and property-based styling</h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="w">    </span>python3<span class="w"> </span>citydb-3dtiler.py<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span>--db-host<span class="w"> </span>localhost<span class="w"> </span>--db-port<span class="w"> </span><span class="m">9876</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span>--db-name<span class="w"> </span>citydb-visualizer<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span>--db-schema<span class="w"> </span>citydb<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">    </span>--db-username<span class="w"> </span>tester<span class="w"> </span>--db-password<span class="w"> </span>louvre<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">    </span>--separate-tilesets<span class="w"> </span>objectclass<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">    </span>tile<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">    </span>--style-mode<span class="w"> </span>property-based
+</span></code></pre></div>
 
 
 

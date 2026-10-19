@@ -13,10 +13,8 @@
         <link rel="canonical" href="https://tum-gis.github.io/citydb-3dtiler/dev_notes/">
       
       
-        <link rel="prev" href="../samples/">
+        <link rel="prev" href="../docker/">
       
-      
-        <link rel="next" href="../how_to_use_w_venv/">
       
       
         
@@ -82,6 +80,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#developer-notes" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -273,6 +276,33 @@
   
   
     <li class="md-nav__item">
+      <a href="../main_options/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Main Options
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../db_con_options/" class="md-nav__link">
         
   
@@ -280,7 +310,7 @@
   <span class="md-ellipsis">
     
   
-    Database Connection Options
+    Database Connection
   
 
     
@@ -307,7 +337,7 @@
   <span class="md-ellipsis">
     
   
-    Filter Options
+    Filters
   
 
     
@@ -388,204 +418,7 @@
   <span class="md-ellipsis">
     
   
-    Sample Commands & Tests
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Developer Notes
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../how_to_use_w_venv/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    How to use with VEnv?
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../all_commands_samples/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    All Commands & Samples
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../test_procedures/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Test Procedures & Tilesets
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../developer_docs/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Documentation for Developers
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../samples_4_advanced/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Example Commands for Advanced Users
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ex_index/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    ex_home
+    Sample Commands
   
 
     
@@ -627,6 +460,43 @@
   
 
     
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -643,6 +513,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+  
+    
   
   
 </nav>
@@ -671,7 +543,7 @@
       
       
       
-        <span class="md-tag">UML</span>
+        <span class="md-tag">Development</span>
       
     
       
@@ -688,9 +560,34 @@
   
 
 
-  <h1>Developer Notes</h1>
-
-
+<h1 id="developer-notes">Developer Notes</h1>
+<p>Following list includes different sources re-used during the development progresses.</p>
+<ul>
+<li><a href="../includes/functionality_matrix/" target="_blank">citydb-3dtiler Functionality Matrix</a><ul>
+<li>shows the implemented and planned functionality.</li>
+</ul>
+</li>
+<li><a href="../includes/file_structure/" target="_blank">File Structure of the Application</a><ul>
+<li>shows which functions/classes are stored in which files &amp; folder.</li>
+</ul>
+</li>
+<li><a href="../includes/advice_classes/" target="_blank">UML Class Diagrams related to Advice file</a><ul>
+<li>shows the the Classes used to generate the Advice.yml file.</li>
+</ul>
+</li>
+<li><a href="../includes/sqlblock_classes/" target="_blank">UML Class Diagrams of the SQLBlocks</a><ul>
+<li>shows the classes used to generate the Dynamic (invoked by the user's commandset) SQL Queries.</li>
+</ul>
+</li>
+<li><a href="../includes/test_procedures/" target="_blank">Test Procedures &amp; Results</a><ul>
+<li>shows the list of test procedures</li>
+</ul>
+</li>
+<li><a href="../includes/to-do_list/" target="_blank">To-Do List</a><ul>
+<li>A personal to-do list used to remember the bugs, missing features etc.</li>
+</ul>
+</li>
+</ul>
 
 
 
