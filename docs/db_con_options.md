@@ -23,9 +23,9 @@ This section lists the options that can be used to connect to the 3DCityDB (v5.x
 
 `-P` or `--db-port` is used to specify the port number that was defined during the database installation or forwarded by the 3DCityDB docker container
 
-??? tip "What if the forwarded port number does not work?"
+??? tip "What if the forwarded port of the 3DCityDB does not work?"
 
-    If you notice that the forwarded database port is not working in your environment, or let's say if you are not sure about the port number, try using the docker inspect [Container Name] command to expose the IP address and port of the running container. Then you can try changing the computer name or the IP address or even the port number with the exposed values (for example: `--db-host 172.17.0.2 --db-port 5432`). The same test can also be performed using other database clients such as pgAdmin.
+    If you notice that the forwarded database port of the 3DCityDB (might be running as a Docker container) is not working in your environment, or let's say if you are not sure about the port number, try using the docker inspect [Container Name] command to expose the IP address and port of the running container. Then you can try changing the computer name or the IP address or even the port number with the exposed values (for example: `--db-host 172.17.0.2 --db-port 5432`). The same test can also be performed using other database clients such as pgAdmin.
 
 ## --db-name (-d)
 

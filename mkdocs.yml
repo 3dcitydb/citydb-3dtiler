@@ -10,8 +10,8 @@ nav:
   - "citydb-3dtiler": index.md
   - "CLI Overview": cli.md
   - "Main Options": main_options.md
-  - "Database Connection" : db_con_options.md
-  - "Filters" : filter_options.md
+  - "Database Con. Options" : db_con_options.md
+  - "Filter Options" : filter_options.md
   - "advise Command" : advise.md
   - "tile Command" : tile.md
   - "Sample Commands" : samples.md
@@ -19,8 +19,8 @@ nav:
   - "Developer Notes" : dev_notes.md
 theme: 
   name: material
-  logo: ./images/citydb_logo.png
-  favicon: ./images/citydb_logo.png
+  logo: ./images/tiles_light.png
+  favicon: ./images/tiles_light.png
   admonition:
     note: octicons/tag-16
     abstract: octicons/checklist-16

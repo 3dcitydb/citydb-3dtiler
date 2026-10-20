@@ -9,35 +9,37 @@ tags:
 
 # CLI Overview
 
-citydb-3dtiler is the main command of the application. When run with the Docker container, this main command is automatically invoked, so there is no need to retype it. However, when running in a Python environment, the main command must be typed. Besides the main command, there are two subcommands: "advise" and "tile". The "--help" option provides explanatory information about the typed command and, depending on the command, other options that can be used.
+citydb-3dtiler is the main command of the application. When run with the Docker container, this main command is automatically invoked, so there is no need to retype it. However, when running in a Python environment, the main command must be typed. Besides the main command, there are two subcommands: `advise` and `tile`. The `--help` option provides explanatory information about the typed command and, depending on the command, other options that can be used.
 
 ??? tip "Where can i find installation instructions in more detail?"
-    If you are planning to install citydb-3dtiler on a Python Virtual Environment and are looking for a more detailed instruction, visit this page: [How to install on a Virtual Environment](includes/how_to_use_w_venv.md){:target="_blank"}. Docker usage is briefly explained here and also described in more detail on the [citydb-3dtiler Docker](docker.md){:target="_blank"} page.
+    If you are planning to install citydb-3dtiler on a Python Virtual Environment and are looking for a more detailed instruction, visit this page: [How to use with Python Virtual Environment?](includes/how_to_use_w_venv.md){:target="_blank"}. Docker usage is briefly explained here and also described in more detail on the [citydb-3dtiler Docker](docker.md){:target="_blank"} page.
 
 ## Synopsis
-
-=== "within the Docker Container"
-
-    ```bash
-    docker run [DOCKER OPTIONS] SUBCOMMAND [OPTIONS] ARGUMENTS
-    ```
 
 === "in the Python Env."
 
     ```bash
-    python3 citydb-3dtiler.py SUBCOMMAND [OPTIONS] ARGUMENTS
+    python3 citydb-3dtiler.py [MAIN OPTIONS] SUBCOMMAND [OPTIONS] ARGUMENTS
     ```
+
+
+=== "within the Docker Container"
+
+    ```bash
+    docker run [DOCKER OPTIONS] [MAIN OPTIONS] SUBCOMMAND [OPTIONS] ARGUMENTS
+    ```
+
 
 ## Options of the main command (citydb-3diler)
 
 | **Option** | **Description** | **Default value** |
 |---|---|---|
 | [-h, --help](#usage-syntax) | shows a help message and exit the program |  |
-| [--tiler-app](main_options.md#tiler-app) | choose one of the compatible 3D Tile Generator app | pg2b3dm |
-| [--tilers-path](main_options.md#tilers-path) | sets the absolute/relative path of the selected 3D Tile Generator software. | tiler_app/ |
-| [--separate-tilesets](main_options.md#separate-tilesets) | exports separate tilesets for each objectclass or namespace |  |
+| [--tiler-app](main_options.md#-tiler-app) | choose one of the compatible 3D Tile Generator app | pg2b3dm |
+| [--tilers-path](main_options.md#-tilers-path) | sets the absolute/relative path of the selected 3D Tile Generator software. | tiler_app/ |
+| [--separate-tilesets](main_options.md#-separate-tilesets) | exports separate tilesets for each objectclass or namespace |  |
 | [(Database Connection Options)](db_con_options.md) | This group is expressed as a placeholder to collectively represent the options used for configuring database connections. Options are as follows: `--db-host`,`--db-port`, `--db-name`, `--db-schema`, `--db-username`, `--db-password` |  |
-| [(Filter Options)](filters.md) | This group is expressed as a placeholder to collectively represent the options used for filtering the existing features. Filtering options are as follows: `--limit`, `--start-index`, `--id`, `--type-name`, `--bbox`, `--bbox-mode`, `--filter` (CQL2), `--sql-filter` |  |
+| [(Filter Options)](filter_options.md) | This group is expressed as a placeholder to collectively represent the options used for filtering the existing features. Filtering options are as follows: `--limit`, `--start-index`, `--id`, `--type-name`, `--bbox`, `--bbox-mode`, `--filter` (CQL2), `--sql-filter` |  |
 
 ??? tip "Check all the subcommands and the options in one diagram"
     If you want to see all the subcommands and the options with possible arguments in one diagram, visit this page : [citydb-3dtiler Functionality Matrix](includes/functionality_matrix.md){:target="_blank"}

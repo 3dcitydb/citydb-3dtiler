@@ -36,4 +36,6 @@ This option is used to specify the criteria for creating multiple tilesets. You 
 
 - Default value is "objectclass"
 
-[Sample 3D Scene](https://tinyurl.com/leipzig3d){:target="_blank"}
+[A Sample 3D Scene contains separate tilesets](https://tinyurl.com/schwabingolstadt2026){:target="_blank"}
+
+![Ingolstadt, 2026](images/sample_for_separeate_tilesets.png)
