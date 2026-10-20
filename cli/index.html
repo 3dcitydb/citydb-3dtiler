@@ -22,7 +22,7 @@
         
       
       
-      <link rel="icon" href="../images/citydb_logo.png">
+      <link rel="icon" href="../images/tiles_light.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
@@ -102,7 +102,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="citydb-3dtiler" class="md-header__button md-logo" aria-label="citydb-3dtiler" data-md-component="logo">
       
-  <img src="../images/citydb_logo.png" alt="logo">
+  <img src="../images/tiles_light.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -197,7 +197,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="citydb-3dtiler" class="md-nav__button md-logo" aria-label="citydb-3dtiler" data-md-component="logo">
       
-  <img src="../images/citydb_logo.png" alt="logo">
+  <img src="../images/tiles_light.png" alt="logo">
 
     </a>
     citydb-3dtiler
@@ -403,7 +403,7 @@
   <span class="md-ellipsis">
     
   
-    Database Connection
+    Database Con. Options
   
 
     
@@ -430,7 +430,7 @@
   <span class="md-ellipsis">
     
   
-    Filters
+    Filter Options
   
 
     
@@ -696,20 +696,20 @@
 
 
 <h1 id="cli-overview">CLI Overview</h1>
-<p>citydb-3dtiler is the main command of the application. When run with the Docker container, this main command is automatically invoked, so there is no need to retype it. However, when running in a Python environment, the main command must be typed. Besides the main command, there are two subcommands: "advise" and "tile". The "--help" option provides explanatory information about the typed command and, depending on the command, other options that can be used.</p>
+<p>citydb-3dtiler is the main command of the application. When run with the Docker container, this main command is automatically invoked, so there is no need to retype it. However, when running in a Python environment, the main command must be typed. Besides the main command, there are two subcommands: <code>advise</code> and <code>tile</code>. The <code>--help</code> option provides explanatory information about the typed command and, depending on the command, other options that can be used.</p>
 <details class="tip">
 <summary>Where can i find installation instructions in more detail?</summary>
-<p>If you are planning to install citydb-3dtiler on a Python Virtual Environment and are looking for a more detailed instruction, visit this page: <a href="../includes/how_to_use_w_venv/" target="_blank">How to install on a Virtual Environment</a>. Docker usage is briefly explained here and also described in more detail on the <a href="../docker/" target="_blank">citydb-3dtiler Docker</a> page.</p>
+<p>If you are planning to install citydb-3dtiler on a Python Virtual Environment and are looking for a more detailed instruction, visit this page: <a href="../includes/how_to_use_w_venv/" target="_blank">How to use with Python Virtual Environment?</a>. Docker usage is briefly explained here and also described in more detail on the <a href="../docker/" target="_blank">citydb-3dtiler Docker</a> page.</p>
 </details>
 <h2 id="synopsis">Synopsis</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">within the Docker Container</label><label for="__tabbed_1_2">in the Python Env.</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">in the Python Env.</label><label for="__tabbed_1_2">within the Docker Container</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>docker<span class="w"> </span>run<span class="w"> </span><span class="o">[</span>DOCKER<span class="w"> </span>OPTIONS<span class="o">]</span><span class="w"> </span>SUBCOMMAND<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>ARGUMENTS
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>python3<span class="w"> </span>citydb-3dtiler.py<span class="w"> </span><span class="o">[</span>MAIN<span class="w"> </span>OPTIONS<span class="o">]</span><span class="w"> </span>SUBCOMMAND<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>ARGUMENTS
 </span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>python3<span class="w"> </span>citydb-3dtiler.py<span class="w"> </span>SUBCOMMAND<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>ARGUMENTS
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>docker<span class="w"> </span>run<span class="w"> </span><span class="o">[</span>DOCKER<span class="w"> </span>OPTIONS<span class="o">]</span><span class="w"> </span><span class="o">[</span>MAIN<span class="w"> </span>OPTIONS<span class="o">]</span><span class="w"> </span>SUBCOMMAND<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>ARGUMENTS
 </span></code></pre></div>
 </div>
 </div>
@@ -730,17 +730,17 @@
 <td></td>
 </tr>
 <tr>
-<td><a href="../main_options/#tiler-app">--tiler-app</a></td>
+<td><a href="../main_options/#-tiler-app">--tiler-app</a></td>
 <td>choose one of the compatible 3D Tile Generator app</td>
 <td>pg2b3dm</td>
 </tr>
 <tr>
-<td><a href="../main_options/#tilers-path">--tilers-path</a></td>
+<td><a href="../main_options/#-tilers-path">--tilers-path</a></td>
 <td>sets the absolute/relative path of the selected 3D Tile Generator software.</td>
 <td>tiler_app/</td>
 </tr>
 <tr>
-<td><a href="../main_options/#separate-tilesets">--separate-tilesets</a></td>
+<td><a href="../main_options/#-separate-tilesets">--separate-tilesets</a></td>
 <td>exports separate tilesets for each objectclass or namespace</td>
 <td></td>
 </tr>
@@ -750,7 +750,7 @@
 <td></td>
 </tr>
 <tr>
-<td><a href="filters.md">(Filter Options)</a></td>
+<td><a href="../filter_options/">(Filter Options)</a></td>
 <td>This group is expressed as a placeholder to collectively represent the options used for filtering the existing features. Filtering options are as follows: <code>--limit</code>, <code>--start-index</code>, <code>--id</code>, <code>--type-name</code>, <code>--bbox</code>, <code>--bbox-mode</code>, <code>--filter</code> (CQL2), <code>--sql-filter</code></td>
 <td></td>
 </tr>

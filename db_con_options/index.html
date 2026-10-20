@@ -22,12 +22,12 @@
         
       
       
-      <link rel="icon" href="../images/citydb_logo.png">
+      <link rel="icon" href="../images/tiles_light.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>Database Connection - citydb-3dtiler</title>
+        <title>Database Con. Options - citydb-3dtiler</title>
       
     
     
@@ -102,7 +102,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="citydb-3dtiler" class="md-header__button md-logo" aria-label="citydb-3dtiler" data-md-component="logo">
       
-  <img src="../images/citydb_logo.png" alt="logo">
+  <img src="../images/tiles_light.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -119,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Database Connection
+              Database Con. Options
             
           </span>
         </div>
@@ -197,7 +197,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="citydb-3dtiler" class="md-nav__button md-logo" aria-label="citydb-3dtiler" data-md-component="logo">
       
-  <img src="../images/citydb_logo.png" alt="logo">
+  <img src="../images/tiles_light.png" alt="logo">
 
     </a>
     citydb-3dtiler
@@ -321,7 +321,7 @@
   <span class="md-ellipsis">
     
   
-    Database Connection
+    Database Con. Options
   
 
     
@@ -339,7 +339,7 @@
   <span class="md-ellipsis">
     
   
-    Database Connection
+    Database Con. Options
   
 
     
@@ -452,7 +452,7 @@
   <span class="md-ellipsis">
     
   
-    Filters
+    Filter Options
   
 
     
@@ -752,8 +752,8 @@
 <h2 id="-db-port-p">--db-port (-P)</h2>
 <p><code>-P</code> or <code>--db-port</code> is used to specify the port number that was defined during the database installation or forwarded by the 3DCityDB docker container</p>
 <details class="tip">
-<summary>What if the forwarded port number does not work?</summary>
-<p>If you notice that the forwarded database port is not working in your environment, or let's say if you are not sure about the port number, try using the docker inspect [Container Name] command to expose the IP address and port of the running container. Then you can try changing the computer name or the IP address or even the port number with the exposed values (for example: <code>--db-host 172.17.0.2 --db-port 5432</code>). The same test can also be performed using other database clients such as pgAdmin.</p>
+<summary>What if the forwarded port of the 3DCityDB does not work?</summary>
+<p>If you notice that the forwarded database port of the 3DCityDB (might be running as a Docker container) is not working in your environment, or let's say if you are not sure about the port number, try using the docker inspect [Container Name] command to expose the IP address and port of the running container. Then you can try changing the computer name or the IP address or even the port number with the exposed values (for example: <code>--db-host 172.17.0.2 --db-port 5432</code>). The same test can also be performed using other database clients such as pgAdmin.</p>
 </details>
 <h2 id="-db-name-d">--db-name (-d)</h2>
 <p><code>-d</code> or <code>--db-name</code> is used to specify the database name. </p>

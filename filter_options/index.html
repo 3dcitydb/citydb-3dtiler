@@ -22,12 +22,12 @@
         
       
       
-      <link rel="icon" href="../images/citydb_logo.png">
+      <link rel="icon" href="../images/tiles_light.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>Filters - citydb-3dtiler</title>
+        <title>Filter Options - citydb-3dtiler</title>
       
     
     
@@ -102,7 +102,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="citydb-3dtiler" class="md-header__button md-logo" aria-label="citydb-3dtiler" data-md-component="logo">
       
-  <img src="../images/citydb_logo.png" alt="logo">
+  <img src="../images/tiles_light.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -119,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Filters
+              Filter Options
             
           </span>
         </div>
@@ -197,7 +197,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="citydb-3dtiler" class="md-nav__button md-logo" aria-label="citydb-3dtiler" data-md-component="logo">
       
-  <img src="../images/citydb_logo.png" alt="logo">
+  <img src="../images/tiles_light.png" alt="logo">
 
     </a>
     citydb-3dtiler
@@ -312,7 +312,7 @@
   <span class="md-ellipsis">
     
   
-    Database Connection
+    Database Con. Options
   
 
     
@@ -348,7 +348,7 @@
   <span class="md-ellipsis">
     
   
-    Filters
+    Filter Options
   
 
     
@@ -366,7 +366,7 @@
   <span class="md-ellipsis">
     
   
-    Filters
+    Filter Options
   
 
     
@@ -795,17 +795,21 @@
 <h2 id="-limit">--limit</h2>
 <p>It can be used to specify a limit number to reduce the selected features.</p>
 <h2 id="-start-index">--start-index</h2>
-<p>It can be used to specify the starting index (Offset) of the selected features.</p>
+<p>It can be used to specify the starting index (known as "Offset" in SQL context) of the selected features.</p>
 <details class="tip">
 <summary>What kind of order is considered while using start-index?</summary>
 <p>The order considered when using <code>--start-index</code> is the existing order in the <code>feature</code> table in the database. This order may not match the order of features within the file you are importing.</p>
 </details>
 <h2 id="-id-i">--id (-i)</h2>
-<p>ID number (<code>citydb.feature.objectid</code> in the database) of a specific feature or ID numbers of a bunch of features. </p>
+<p>ID number(s) (<code>citydb.feature.objectid</code> in the database) of specific feature(s). </p>
 <p>Use comma as id number separator for multiple inputs and do not add space character between the id numbers.</p>
 <ul>
 <li>Example :  <code>--id 9876,1234,8765,2345</code></li>
 </ul>
+<details class="tip">
+<summary>What is the objectid?</summary>
+<p><code>objectid</code> in the <code>feature</code> table were also known as <code>gmlid</code> in the former versions of the 3DCityDBs, which is the same value with the <code>gml:id</code> attributes in the imported CityGML or CityJSON file.</p>
+</details>
 <h2 id="-type-name-t">--type-name (-t)</h2>
 <p>Type name of the features or a set of type names (aka ObjectClass). </p>
 <p>Use comma as type name separator for multiple inputs and do not add space character between the type names</p>
@@ -823,30 +827,30 @@
 </details>
 <details class="tip">
 <summary>SRID Values</summary>
-<p>If you are not sure about the CRS/SRS value of your dataset, you can search for the term <code>srsName</code> in the imported file or check the data in the <code>database_srs</code> table within the citydb schema in your database. The given SRID value must be a predefined CRS Code available in <a href="https://epsg.io">EPSG.io</a>.</p>
+<p>If you are not sure about the CRS/SRS value of your dataset, you can search for the term <code>srsName</code> in the imported file or check the data in the <code>database_srs</code> table within the <code>citydb</code> schema in your database. The given SRID value must be a predefined CRS Code available in <a href="https://epsg.io">EPSG.io</a>.</p>
 </details>
 <h2 id="-bbox-mode">--bbox-mode</h2>
-<p>This option can used to specify the method of the boundary box usage as the filtering geometry. There four options to select:</p>
+<p>This option can be used to specify the method of the boundary box usage as the filtering geometry. There are four options to select:</p>
 <ul>
-<li><code>intersects</code> :<ul>
-<li>It uses spatial indexes, but not exact geometries, to query any intersection.</li>
+<li><code>intersects</code> (default value):<ul>
+<li>It uses spatial indexes, but not exact geometries, to query any intersection. (Fast, but less reliable results)</li>
 </ul>
 </li>
 <li><code>intersects-precise</code> :<ul>
-<li>It uses both spatial indexes and geometries to query any intersection. (Slower/More Reliable option)</li>
+<li>It uses both spatial indexes and geometries to query any intersection. (Slower, but more reliable results)</li>
 </ul>
 </li>
 <li><code>contains</code> :<ul>
-<li>It uses spatial indexes, but not exact geometries, to query any containment case.</li>
+<li>It uses spatial indexes, but not exact geometries, to query any containment case. (Fast, but less reliable results)</li>
 </ul>
 </li>
 <li><code>contains-precise</code> :<ul>
-<li>It uses both spatial indexes and geometries to query any containment case. (Slower/More Reliable option)</li>
+<li>It uses both spatial indexes and geometries to query any containment case. (Slower, but more reliable results)</li>
 </ul>
 </li>
 </ul>
 <details class="warning">
-<summary>must always used with <code>--bbox option</code></summary>
+<summary>must always be used with <code>--bbox option</code></summary>
 <p><code>--bbox-mode</code> option must always be used together with <code>--bbox</code>.</p>
 </details>
 <ul>
@@ -854,18 +858,18 @@
 </ul>
 <h2 id="-filter-f">--filter (-f)</h2>
 <p>CQL2 filter expression. </p>
-<p>Use the attribute names listed in the advise.yml file exactly as they are written in the file ( Common pattern : <code>[NAMESPACE]_[PROPERTY]</code> ). Use <code>~geom</code> to refer to the geometry column.</p>
+<p>Use the attribute names listed in the advice.yml file exactly as they are written in the file ( Common pattern : <code>[NAMESPACE]_[PROPERTY]</code> ). Use <code>~geom</code> to refer to the geometry column.</p>
 <ul>
 <li>Example : <code>--filter "gen_revision_jahr &gt;= 2021"</code></li>
 </ul>
 <details class="warning">
 <summary>Must be wrapped in quotes</summary>
 <p>Both SQL and CQL2 filters' arguments must be wrapped in quotes.
-An example: <code>--filter "bldg_usage ='1100'"</code>.</p>
+An example: <code>--filter "bldg_usage ='1100'"</code>. You can use the single quotes to use encapsulate the internal string values.</p>
 </details>
 <details class="tip">
 <summary>What if spatial operator fails against 3D geometries?</summary>
-<p>If the selected spatial operator does not work with the 3D geometries, try to use : <code>'st_envelope(~geom)'</code></p>
+<p>If the selected spatial operator does not work with the 3D geometries, try to use : <code>'st_envelope(~geom)'</code> or <code>st_convexhull(~geom)</code> (would give more reliable results)</p>
 </details>
 <h2 id="-sql-filter">--sql-filter</h2>
 <p>The SQL Filter accepts WHERE conditions just as they are written in standard SQL queries. Use '~geom' to refer to the geometry column.</p>
