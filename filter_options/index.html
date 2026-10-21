@@ -861,6 +861,7 @@
 <p>Use the attribute names listed in the advice.yml file exactly as they are written in the file ( Common pattern : <code>[NAMESPACE]_[PROPERTY]</code> ). Use <code>~geom</code> to refer to the geometry column.</p>
 <ul>
 <li>Example : <code>--filter "gen_revision_jahr &gt;= 2021"</code></li>
+<li>Example : <code>s_overlaps(~geom,BBOX(9.978199, 53.541309, 10.010294, 53.557241, 4326)</code></li>
 </ul>
 <details class="warning">
 <summary>Must be wrapped in quotes</summary>
@@ -874,7 +875,7 @@ An example: <code>--filter "bldg_usage ='1100'"</code>. You can use the single q
 <h2 id="-sql-filter">--sql-filter</h2>
 <p>The SQL Filter accepts WHERE conditions just as they are written in standard SQL queries. Use '~geom' to refer to the geometry column.</p>
 <ul>
-<li>Example : <code>bldg_usage = ‘residential’ AND bldg_height__measured_height &gt; 12.5</code> . </li>
+<li>Example : <code>bldg_usage = ‘residential’ AND bldg_height__measured_height &gt; 12.5</code> </li>
 </ul>
 
 
