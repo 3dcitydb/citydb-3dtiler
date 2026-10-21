@@ -119,7 +119,7 @@ If you want to view the attributes as a flat/tabular data structure, select the 
 
 - Example : `--tiles-version 1.0`
 
-[A video shows the usage of the 3DTiles v1.0 on QGIS Desktop](https://www.3dcitydb.net/3dcitydb/fileadmin/public/kendir/bern_full_procedure/video/sample_view_on_qgis.mp4){:target="_blank"}
+[A video shows the usage of the 3DTiles v1.0 on QGIS Desktop](https://www.3dcitydb.net/3dcitydb/fileadmin/public/kendir/bern_full_procedure/video/sample_3dtiles_on_qgis_desktop_f_resit_rey_cmp.mkv){:target="_blank"}
 
 ??? tip "How can i show the 3DTiles on QGIS Desktop app?"
     There are multiple methods to visualize the 3DTiles on the QGIS Desktop (using CesiumIon plugin etc.). If you just want to visualize the 3DTiles on QGIS Desktop without using any cloud storage, then you need to generate the 3DTiles in the version 1.0. Store the tileset into your computer within version 1.0, then simply locate the tileset.json file in QGIS Desktop.

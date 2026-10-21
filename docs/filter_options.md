@@ -79,6 +79,7 @@ CQL2 filter expression.
 Use the attribute names listed in the advice.yml file exactly as they are written in the file ( Common pattern : `[NAMESPACE]_[PROPERTY]` ). Use `~geom` to refer to the geometry column.
 
 - Example : `--filter "gen_revision_jahr >= 2021"`
+- Example : `s_overlaps(~geom,BBOX(9.978199, 53.541309, 10.010294, 53.557241, 4326)`
 
 ??? warning "Must be wrapped in quotes"
     Both SQL and CQL2 filters' arguments must be wrapped in quotes.
@@ -91,4 +92,4 @@ Use the attribute names listed in the advice.yml file exactly as they are writte
 
 The SQL Filter accepts WHERE conditions just as they are written in standard SQL queries. Use '~geom' to refer to the geometry column.
 
-- Example : `bldg_usage = ‘residential’ AND bldg_height__measured_height > 12.5` . 
+- Example : `bldg_usage = ‘residential’ AND bldg_height__measured_height > 12.5` 
