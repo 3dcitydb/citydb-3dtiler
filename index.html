@@ -811,6 +811,10 @@
 <li>supports 3DTiles v1.0 and v1.1</li>
 <li>The Execution Times of the tiling mechanism depends on the given command, available dataset and the hardware. If you are curious about the execution times of some previously generated test visit <a href="https://www.3dcitydb.net/3dcitydb/fileadmin/public/kendir/bern_full_procedure/execution_times.md" target="_blank">this page</a>.</li>
 </ul>
+<details class="warning">
+<summary>This application requires database user credentials with read and write privileges.</summary>
+<p>Since the application generates 3DTiles based on the existing data in the database, additional views and tables may be created in the database. For this reason, users need <strong>read</strong> and <strong>write</strong> privileges on the database. A solution is planned for users who have read-only privileges.</p>
+</details>
 <h2 id="special-thanks">Special Thanks</h2>
 <p>This application is based on two important concepts and aims to bridge the gap between the concepts 3DTiles and CityGML.
 To bridge this gap, two main elements have been used in this software: <a href="https://docs.3dcitydb.org/edge/" target="_blank">3DCityDB v5</a>, <a href="https://github.com/Geodan/pg2b3dm" target="_blank">pg2b3dm</a></p>
