@@ -13,7 +13,6 @@ tags:
 </figure>
 
 !!! warning "This application is in the testing phase"
-
     This application is still in the testing phase. Please exercise caution when using it in production. Therefore, feedback is always welcome. Please feel free to create an issue on the GitHub page or contact me: murat.kendir(At)tum.de
 
 `citydb-3dtiler` can generate 3DTiles (v 1.0 and 1.1) by reading features (formerly known as "cityobject"s) from 3DCityDB (v5.x), a database application that can import CityGML 2.0 or 3.0-based datasets. The application's key features are as follows:
@@ -29,6 +28,9 @@ tags:
 - filters the relevant attributes and can flatten the structure of complex attributes (such as con:Height)
 - supports 3DTiles v1.0 and v1.1
 - The Execution Times of the tiling mechanism depends on the given command, available dataset and the hardware. If you are curious about the execution times of some previously generated test visit [this page](https://www.3dcitydb.net/3dcitydb/fileadmin/public/kendir/bern_full_procedure/execution_times.md){:target="_blank"}.
+
+??? warning "This application requires database user credentials with read and write privileges."
+    Since the application generates 3DTiles based on the existing data in the database, additional views and tables may be created in the database. For this reason, users need **read** and **write** privileges on the database. A solution is planned for users who have read-only privileges.
 
 ## Special Thanks
 
