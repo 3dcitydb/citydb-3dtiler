@@ -1,4 +1,4 @@
-FROM python:3.12.3-bullseye
+FROM python:3.12.3-bookworm
 LABEL org.opencontainers.image.authors="murat.kendir@tum.de"
 LABEL maintainer="murat.kendir@tum.de"
 LABEL composition=citydb-3dtiler

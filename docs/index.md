@@ -49,7 +49,7 @@ There are two different ways to use citydb-3dtiler: using Docker containers and 
     If you do not want to customize the feature colors (materials), proceed to Step 4. Otherwise, follow the next instructions.
 
 Download and customize the "materials_for_features" file with one of office software (LibreOffice, OpenOffice or OnlyOffice) by changing the color values in the first sheet (sheet name: "materials").
-[materials_for_features.ods](https://github.com/tum-gis/citydb-3dtiler/blob/main/materials_for_features/materials_for_features.ods){:target="_blank"}
+[materials_for_features.ods](https://github.com/3dcitydb/citydb-3dtiler/blob/main/materials_for_features/materials_for_features.ods){:target="_blank"}
 
 ??? tip "Activate the internal Macro if you need to see the colors immediately"
     When you open the shared ODS file (compatible with LibreOffice, OpenOffice, OnlyOffice etc.), your Office application will ask whether you want to enable the Macro contained in the file. This macro is used as a color picker and displays the entered color code (RGBA hexadecimal codes) on an additional sheet, so you can see the colors and transparency levels directly on the document.
