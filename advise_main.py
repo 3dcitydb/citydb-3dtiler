@@ -24,6 +24,9 @@ def advise(args):
     
     # Take the used command arguments and save as list 
     commandset = dict(args._get_kwargs())
+    # Added for security purpose
+    commandset['db_password'] = '****'
+ 
 
     if args.separate_tilesets is not None:
         if args.separate_tilesets == "objectclass":
