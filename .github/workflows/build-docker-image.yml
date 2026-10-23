@@ -38,7 +38,7 @@ jobs:
       with:
         images: |
           ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-          3dcitydb/citydb-3dtiler
+          tumgis/citydb-3dtiler
         tags: |
           type=raw,value=latest
         labels: |
