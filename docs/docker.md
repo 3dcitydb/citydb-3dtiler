@@ -13,7 +13,7 @@ tags:
 
 Download and customize the "materials_for_features" file with one of office software (LibreOffice, OpenOffice or OnlyOffice) by changing the color values in the first sheet (sheet name: "materials").
 
-- [materials_for_features.ods](https://github.com/tum-gis/citydb-3dtiler/blob/main/materials_for_features/materials_for_features.ods){:target="_blank"}
+- [materials_for_features.ods](https://github.com/3dcitydb/citydb-3dtiler/blob/main/materials_for_features/materials_for_features.ods){:target="_blank"}
 
 ??? tip "If you do not want to customize"
 
@@ -104,7 +104,7 @@ Using your preferred CLI tool (Terminal/Shell), navigate to the same folder with
 
 ??? tip "Alternative Docker Registry"
 
-    Alternatively, you can use the Docker Hub registry by changing the image location in the above commands (ghcr.io/tumgis/citydb-3dtiler:latest <> tumgis/citydb-3dtiler:latest) or by first pulling the same image with the following command: ```docker pull tumgis/citydb-3dtiler:latest```
+    Alternatively, you can use the Docker Hub registry by changing the image location in the above commands (ghcr.io/3dcitydb/citydb-3dtiler:latest <> tumgis/citydb-3dtiler:latest) or by first pulling the same image with the following command: ```docker pull tumgis/citydb-3dtiler:latest```
 
 ## 5. Generate the 3DTiles
 
