@@ -31,6 +31,7 @@ ENV PIP_ROOT_USER_ACTION=ignore
 RUN pip install --upgrade pip
 RUN pip install --force-reinstall -v "psycopg2-binary==2.9.11"
 RUN pip install --force-reinstall -v "PyYAML==6.0.3"
+RUN pip install --force-reinstall -v "cql2==0.6.0"
 
 ENTRYPOINT ["python3", "./citydb-3dtiler.py"]
 CMD ["--help", "advise", "tile"]

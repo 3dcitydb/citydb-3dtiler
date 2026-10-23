@@ -80,7 +80,7 @@ Using your preferred CLI tool (Terminal/Shell), navigate to the same folder with
     --rm --interactive --tty `
     --name citydb-3dtiler `
     --volume ./:/home/tester/citydb-3dtiler/shared:rw `
-    ghcr.io/tum-gis/citydb-3dtiler:latest `
+    ghcr.io/3dcitydb/citydb-3dtiler:latest `
     --db-host <IP-or-COMP-NAME> --db-port <PORT-NUMBER> `
     --db-name <DATABASE-NAME> --db-schema <SCHEMA-NAME> `
     --db-username <USER-NAME> --db-password <DATABASE-PASSWORD> `
@@ -94,7 +94,7 @@ Using your preferred CLI tool (Terminal/Shell), navigate to the same folder with
     --rm --interactive --tty \
     --name citydb-3dtiler \
     --volume ./:/home/tester/citydb-3dtiler/shared:rw \
-    ghcr.io/tum-gis/citydb-3dtiler:latest \
+    ghcr.io/3dcitydb/citydb-3dtiler:latest \
     --db-host <IP-or-COMP-NAME> --db-port <PORT-NUMBER> \
     --db-name <DATABASE-NAME> --db-schema <SCHEMA-NAME> \
     --db-username <USER-NAME> --db-password <DATABASE-PASSWORD> \
@@ -108,7 +108,7 @@ Using your preferred CLI tool (Terminal/Shell), navigate to the same folder with
     --rm --interactive --tty ^
     --name citydb-3dtiler ^
     --volume ./:/home/tester/citydb-3dtiler/shared:rw ^
-    ghcr.io/tum-gis/citydb-3dtiler:latest ^
+    ghcr.io/3dcitydb/citydb-3dtiler:latest ^
     --db-host <IP-or-COMP-NAME> --db-port <PORT-NUMBER> ^
     --db-name <DATABASE-NAME> --db-schema <SCHEMA-NAME> ^
     --db-username <USER-NAME> --db-password <DATABASE-PASSWORD> ^
@@ -122,7 +122,7 @@ Using your preferred CLI tool (Terminal/Shell), navigate to the same folder with
     --rm --interactive --tty \
     --name citydb-3dtiler \
     --volume ./:/home/tester/citydb-3dtiler/shared:rw \
-    ghcr.io/tum-gis/citydb-3dtiler:latest \
+    ghcr.io/3dcitydb/citydb-3dtiler:latest \
     --db-host 10.162.246.888 --db-port 9876 \
     --db-name citydb-visualizer --db-schema citydb \
     --db-username tester2 --db-password louvre \
@@ -144,7 +144,7 @@ Generate 3DTiles using the default configuration by typing the following command
     --rm --interactive --tty `
     --name citydb-3dtiler `
     --volume ./:/home/tester/citydb-3dtiler/shared:rw `
-    ghcr.io/tum-gis/citydb-3dtiler:latest `
+    ghcr.io/3dcitydb/citydb-3dtiler:latest `
     --db-host <IP-or-COMP-NAME> --db-port <PORT-NUMBER> `
     --db-name <DATABASE-NAME> --db-schema <SCHEMA-NAME> `
     --db-username <USER-NAME> --db-password <DATABASE-PASSWORD> `
@@ -158,7 +158,7 @@ Generate 3DTiles using the default configuration by typing the following command
     --rm --interactive --tty \
     --name citydb-3dtiler \
     --volume ./:/home/tester/citydb-3dtiler/shared:rw \
-    ghcr.io/tum-gis/citydb-3dtiler:latest \
+    ghcr.io/3dcitydb/citydb-3dtiler:latest \
     --db-host <IP-or-COMP-NAME> --db-port <PORT-NUMBER> \
     --db-name <DATABASE-NAME> --db-schema <SCHEMA-NAME> \
     --db-username <USER-NAME> --db-password <DATABASE-PASSWORD> \
@@ -172,7 +172,7 @@ Generate 3DTiles using the default configuration by typing the following command
     --rm --interactive --tty ^
     --name citydb-3dtiler ^
     --volume ./:/home/tester/citydb-3dtiler/shared:rw ^
-    ghcr.io/tum-gis/citydb-3dtiler:latest ^
+    ghcr.io/3dcitydb/citydb-3dtiler:latest ^
     --db-host <IP-or-COMP-NAME> --db-port <PORT-NUMBER> ^
     --db-name <DATABASE-NAME> --db-schema <SCHEMA-NAME> ^
     --db-username <USER-NAME> --db-password <DATABASE-PASSWORD> ^
@@ -186,7 +186,7 @@ Generate 3DTiles using the default configuration by typing the following command
     --rm --interactive --tty \
     --name citydb-3dtiler \
     --volume ./:/home/tester/citydb-3dtiler/shared:rw \
-    ghcr.io/tum-gis/citydb-3dtiler:latest \
+    ghcr.io/3dcitydb/citydb-3dtiler:latest \
     --db-host 10.162.246.888 --db-port 9876 \
     --db-name citydb-visualizer --db-schema citydb \
     --db-username tester2 --db-password louvre \
