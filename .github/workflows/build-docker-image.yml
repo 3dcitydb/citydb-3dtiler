@@ -7,7 +7,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: tum-gis/citydb-3dtiler
+  IMAGE_NAME: 3dcitydb/citydb-3dtiler
 
 jobs:
   build:
@@ -38,7 +38,7 @@ jobs:
       with:
         images: |
           ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-          tumgis/citydb-3dtiler
+          3dcitydb/citydb-3dtiler
         tags: |
           type=raw,value=latest
         labels: |

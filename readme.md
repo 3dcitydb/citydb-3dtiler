@@ -25,9 +25,7 @@ Links for relevant libraries :
 Please check the documentation page available here:
 [citydb-3dtiler Docs](https://https://3dcitydb.github.io/citydb-3dtiler/)
 
-Docker image of the application is available. Check the following pages for more information:
-- [How to use the application within Docker](https://3dcitydb.github.io/citydb-3dtiler/how_to_use_w_docker/)
-- [Tips for Docker Usage](https://3dcitydb.github.io/citydb-3dtiler/tips_for_docker_usage/)
+Docker image of the application is available. Check the [Docker Usage](https://3dcitydb.github.io/citydb-3dtiler/docker/) page for more information.
 
 ## Special Thanks:
 

@@ -8,7 +8,7 @@ env:
   # Docker Hub repository name
   DOCKERHUB_REPO: ${{ secrets.DOCKERHUB_USERNAME }}/citydb-3dtiler
   # GHCR repository name for tum-gis organization
-  GHCR_REPO: ghcr.io/tum-gis/citydb-3dtiler
+  GHCR_REPO: ghcr.io/3dcitydb/citydb-3dtiler
 
 jobs:
   build-and-push:
