@@ -25,13 +25,13 @@ def main():
     parser.add_argument("--tilers-path", help="Set the absolute/relative path of the selected 3D Tile Generator software.", metavar="File Path of the 3D Tiler", nargs="?", default="tiler_app/")
     parser.add_argument("--tiler-app", help="Choose one of the compatible 3D Tile Generator app.", default="pg2b3dm", choices=["pg2b3dm", "py3dtiles"])
     parser.add_argument("--separate-tilesets", help="exports separate tilesets for each objectclass or namespace", nargs="?", default=None, choices=["objectclass", "namespace"])
+    parser.add_argument("--ignore-thematic-surfaces", help="ignores the thematic surfaces that descend from AbstractThematicSurface, such as WallSurface, WindowSurface etc.", action=argparse.BooleanOptionalAction, default=False)
 
     # Subparsers used to gather together the command related arguments
     subparsers = parser.add_subparsers(help="Select one of the operations: advise, tile.", dest="command")
 
     # Advise command uses it"s own arguments
     parser_advise = subparsers.add_parser("advise", help="generates advisement docs for the existing dataset.")
-    parser_advise.add_argument("--ignore-thematic-features", action=argparse.BooleanOptionalAction, default=False)
     #parser_advise.add_argument("--consider-appearances", action=argparse.BooleanOptionalAction, default=False)
     parser_advise.add_argument("-o", "--output-file", metavar="Output File Name", nargs="?", default="advice.yml")
     
@@ -48,6 +48,7 @@ def main():
     parser_tile.add_argument("--attribute-structure", help="If you want to view the attributes as a flat/tabular data structure, select the “flat” option (default). If you want to view them as a nested structure, just as they are (in a JSON-like stucture), select the “nested” option.", choices=["flat", "nested"], default="flat")
     parser_tile.add_argument("--tiles-version", help="If you want to create the 3DTiles using a different version (in default 1.1), specify the version name (as 1.0).", choices=["1.0","1.1"], default="1.1")
     parser_tile.add_argument("--vertical-offset", help="Specify the vertical offset as a float number (for exp. 0.15 / -1.25).", nargs="?", default="0.0")
+    parser_tile.add_argument("--vertical-offset-from-csv", help="Consider the CSV file to assign different vertical offsets for different objectclasses or feature groups with specific properties.", action=argparse.BooleanOptionalAction, default=False)
     
     # Database authorization information gathered as a group,
     # so the group arguments can be used both of the commands.
@@ -75,6 +76,7 @@ def main():
 
     # User arguments forwarded to the relevant functions.
     if args.command == "advise":
+        print(args)
         advise(args)
     elif args.command == "tile":
         # Check if the advise command executed once or not.

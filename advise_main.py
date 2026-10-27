@@ -14,7 +14,12 @@ def advise(args):
     conn = pg_establish(args)
 
     # Take the existing objectclasses in the database instance
-    oc_list, oc_sql_fil = read_sql_file("standalone_queries", "get_all_available_objectclasses.sql")
+    # If --ignore-thematic-surfaces is selected ignore them
+    if args.ignore_thematic_surfaces == True:
+        oc_list, oc_sql_fil = read_sql_file("standalone_queries", "get_all_available_objectclasses_wo_thematics.sql")
+    else:
+        oc_list, oc_sql_fil = read_sql_file("standalone_queries", "get_all_available_objectclasses.sql")
+    
     result_oc = get_query_results(args, oc_list, name=oc_sql_fil)
 
     # If the CRS is not specified when using BBox, 
@@ -59,8 +64,12 @@ def advise(args):
             except OSError as err:
                 print(f"File Writing Error:\n{err}")
     else:
-        # Calculate the recommended max features per tile by considering all the features
-        oc_statistics = get_query_results(args, str(recommended_max_features_per_tile), name="recommended_max_features_per_tile (instance)")
+        if args.ignore_thematic_surfaces == True:
+            oc_statistics = get_query_results(args, str(recommended_max_features_per_tile_wo_thematics), name="recommended_max_features_per_tile_wo_thematics (instance)")
+        else:
+            # Calculate the recommended max features per tile by considering all the features
+            oc_statistics = get_query_results(args, str(recommended_max_features_per_tile), name="recommended_max_features_per_tile (instance)")
+        
         rmf = oc_statistics[3]
         # Add the existing objectclasses to the advisement document
         ocs= []

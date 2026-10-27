@@ -58,6 +58,25 @@ geometry_statistics = QueryBlock(
     join_elements = oc_spr_joins
     )
 
+# Adds an option to filter out the thematic surfaces
+
+fltr_ot_thmtc_srfcs = WhereElements(
+    WhereElement(
+        condition="oc.id not in (612,715,15,718,713,203,710,615,711,300,614,716,714,712,613,709,1503,1502,719)",
+        operator="AND"
+        )
+    )
+
+geometry_statistics_wo_thmtcs = QueryBlock(
+    name = "Statistics of Geometries",
+    range_alias = "stt",
+    type_of_effect = "Spatial",
+    order_number = 1,
+    select_elements = gmt_stt_selects,
+    from_elements = gmt_stt_froms,
+    join_elements = oc_spr_joins,
+    where_elements = fltr_ot_thmtc_srfcs
+    )
 
 # Combination of "Statistics of Geometries" and "Addition of Objectclasses"
 
@@ -92,6 +111,14 @@ rcm_mxm_ftr_pr_tl_selects_froms = FromElements(
     FromElement(
         inner_query_blocks = [geometry_statistics])
     )
+
+# Adds an option to filter out the thematic surfaces
+
+rcm_mxm_ftr_pr_tl_selects_froms_wo_thmtcs = FromElements(
+    FromElement(
+        inner_query_blocks = [geometry_statistics_wo_thmtcs])
+    )
+
 recommended_max_features_per_tile = QueryBlock(
     name = "Recommended Max Features Per Tile",
     type_of_effect = "Ontological",
@@ -100,3 +127,12 @@ recommended_max_features_per_tile = QueryBlock(
     from_elements = rcm_mxm_ftr_pr_tl_selects_froms
     )
 
+# Adds an option to filter out the thematic surfaces
+
+recommended_max_features_per_tile_wo_thematics = QueryBlock(
+    name = "Recommended Max Features Per Tile",
+    type_of_effect = "Ontological",
+    order_number = 1,
+    select_elements = rcm_mxm_ftr_pr_tl_selects,
+    from_elements = rcm_mxm_ftr_pr_tl_selects_froms_wo_thmtcs,
+    )

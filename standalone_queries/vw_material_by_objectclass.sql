@@ -9,7 +9,8 @@ SELECT namespace_of_classname as ns,
             'PbrMetallicRoughness' : pbr_metallic_roughness, 
             'SpecularGlossiness' : NULLIF(pbr_specular_glossiness, '{}')
             ABSENT ON NULL RETURNING json)
-            AS material_data
+            AS material_data,
+        vertical_offset
 FROM
     (SELECT mtf.namespace_of_classname,
             mtf.classname,
@@ -23,7 +24,8 @@ FROM
                 'DiffuseColors' : NULLIF(ARRAY[mtf.pbr_specular_glossiness_diffuse_color], '{NULL}'), 
                 'SpecularGlossiness' : NULLIF(ARRAY[mtf.pbr_specular_glossiness_specular_glossiness], '{NULL}') 
                  NULL ON NULL RETURNING json)::jsonb)
-                 AS pbr_specular_glossiness
+                 AS pbr_specular_glossiness,
+            vertical_offset
      FROM _materials_for_features as mtf
      WHERE mtf.property_value IS NULL);
 

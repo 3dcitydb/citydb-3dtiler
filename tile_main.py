@@ -233,6 +233,16 @@ def create_tileset(args, output_path=None, max_features_per_tile=None, whrs=None
             query = QueryBlocks(krnl_query, selected_styling_addition)
             attribute_as_string = None
     
+    # Check the vertical offset available in the CSV file
+    if args.vertical_offset_from_csv == True and args.style_mode == 'property-based':
+        # If the style-mode is property-based and the CSV file contains offsets
+        krnl_query.select_elements[0].field = f"st_translate(gmdt.geometry, 0, 0, COALESCE(mtr_prp_mtc.vertical_offset,mtr_oc.vertical_offset))"
+        #print(query)
+
+    elif args.vertical_offset_from_csv == True and args.style_mode != 'property-based':
+        # If the style-mode is different than property-based and the CSV file contains offsets
+        krnl_query.select_elements[0].field = f"st_translate(gmdt.geometry, 0, 0, mtr_oc.vertical_offset)"
+
     # Add the filtering options
     # if limit & offset (start-index) 
     if args.limit is not None or args.start_index is not None:

@@ -16,6 +16,7 @@ CREATE TABLE IF NOT EXISTS citydb._materials_for_features
     pbr_metallic_roughness_metallic_roughness text,
     pbr_specular_glossiness_diffuse_color text,
     pbr_specular_glossiness_specular_glossiness text,
+    vertical_offset numeric,
     CONSTRAINT _materials_for_features_v1_pkey PRIMARY KEY (id)
 )
 
