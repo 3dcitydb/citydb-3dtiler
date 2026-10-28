@@ -51,6 +51,3 @@ FROM
     ) as pros2
 GROUP BY pros2.classname
 ) as pros3
-
-
-

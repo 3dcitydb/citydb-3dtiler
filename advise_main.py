@@ -16,11 +16,13 @@ def advise(args):
     # Take the existing objectclasses in the database instance
     # If --ignore-thematic-surfaces is selected ignore them
     if args.ignore_thematic_surfaces == True:
-        oc_list, oc_sql_fil = read_sql_file("standalone_queries", "get_all_available_objectclasses_wo_thematics.sql")
+        existing_features, existing_features_file_name = read_sql_file("standalone_queries", "get_all_available_namespaces_wo_thematics.sql")
     else:
-        oc_list, oc_sql_fil = read_sql_file("standalone_queries", "get_all_available_objectclasses.sql")
-    
-    result_oc = get_query_results(args, oc_list, name=oc_sql_fil)
+        existing_features, existing_features_file_name = read_sql_file("standalone_queries", "get_all_available_namespaces.sql")
+
+
+    result = get_query_results(args, existing_features, name=existing_features_file_name)
+    # print(result)
 
     # If the CRS is not specified when using BBox, 
     # following query will expose the used CRS on database.
@@ -63,6 +65,10 @@ def advise(args):
                 write_yaml(get_shared_folder_path(), args.output_file, dict(adv))
             except OSError as err:
                 print(f"File Writing Error:\n{err}")
+        
+        #if args.separate_tilesets == "namespace":
+            
+
     else:
         if args.ignore_thematic_surfaces == True:
             oc_statistics = get_query_results(args, str(recommended_max_features_per_tile_wo_thematics), name="recommended_max_features_per_tile_wo_thematics (instance)")
@@ -73,11 +79,17 @@ def advise(args):
         rmf = oc_statistics[3]
         # Add the existing objectclasses to the advisement document
         ocs= []
-        # print(result_oc)
-        for oc in result_oc[0]:
-            # print(result_oc[0][oc]["properties"])
-            oc_new = dict(ObjectClass(oc, properties = result_oc[0][oc]["properties"]))
-            ocs.append(oc_new)
+        namespaces = [v for v in result[0].keys()]
+        objectclasses = [k for v in result[0].values() for k in v.keys()]
+
+        for ns in result[0] :
+            for oc in result[0][ns]:
+                # print(oc)
+                oc_new = dict(ObjectClass(oc, properties = result[0][ns][oc]["properties"]))
+                ocs.append(oc_new)
+        # print(ocs)
+        
+        
         # Set the advisement class
         adv = Advisement(commandset, max_features=int(rmf), crs_code=result_crs[0], objectclasses = ocs)
         # Write the Advisement as a YAML file

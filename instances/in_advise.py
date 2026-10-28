@@ -45,6 +45,12 @@ oc_spr_joins = JoinElements(
         table = "objectclass",
         range_alias = "oc",
         condition = "ftr.objectclass_id = oc.id"
+        ),
+    JoinElement(
+        join_type = "left",
+        table = "namespace",
+        range_alias = "ns",
+        condition = "ns.id = oc.namespace_id"
         )
     )
 

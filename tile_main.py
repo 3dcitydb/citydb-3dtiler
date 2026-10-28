@@ -394,6 +394,9 @@ def tile(args):
                     WhereElement(condition = cndtn))
                 # print("HERE IS THE WHERE COND:", whrs_oc)
                 create_tileset(args, output_path=oc_path, max_features_per_tile=oc_mfpt, whrs=whrs_oc, attribute_list = oc_attrs2)
+        elif args.separate_tilesets == "namespace":
+            advice_summary = summarize_advice(args)
+            print("hey!!!")
     else:
         advice_summary = summarize_advice(args)
         if args.output_folder == "shared":
