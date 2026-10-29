@@ -53,6 +53,8 @@
       
     
     
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
       <link rel="stylesheet" href="../extra_style.css">
     
       <link rel="stylesheet" href="../assets/mkdocs_puml/puml.css">
@@ -559,17 +561,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#all-available-commands-arguments-options" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        All available Commands, Arguments &amp; Options
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#remove-the-docker-images-optional" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -751,17 +742,6 @@
     <span class="md-ellipsis">
       
         5. Generate the 3DTiles
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#all-available-commands-arguments-options" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        All available Commands, Arguments &amp; Options
       
     </span>
   </a>
@@ -1023,62 +1003,6 @@ If you customized the colors in the first sheet ("materials") using RGBA hex col
 </div>
 </div>
 </div>
-<h2 id="all-available-commands-arguments-options">All available Commands, Arguments &amp; Options</h2>
-<details class="example">
-<summary>citydb-3dtiler Usage</summary>
-<p>--help </br>
---db-.. </br></p>
-<details class="example">
-<summary>Database Connection Arguments</summary>
-<p>--db-host </br>
---db-port (default: 5432) </br>
---db-name </br>
---db-schema (default: citydb) </br>
---db-username </br>
---db-password </br></p>
-</details>
-<p>--separate-tilesets</p>
-<details class="info">
-<summary>Separate Tilesets Options</summary>
-<p>None (Default) </br>
-objectclass</p>
-</details>
-<p>--tiler-app (default: pg2b3dm) </br>
---tilers-path (default: tiler_app) </br>
-advise </br></p>
-<details class="example">
-<summary>Advise Arguments</summary>
-<p>--help </br>
---consider-thematic-features (default: False) </br>
---output-file (default: advice.yml)</p>
-</details>
-<p>tile</p>
-<details class="example">
-<summary>Tile Arguments</summary>
-<p>--help </br>
---custom-style (default: materials_for_features.csv) </br>
---style-mode</p>
-<details class="info">
-<summary>Style Mode Options</summary>
-<p>property-based </br>
-objectclass-based (default) </br>
-no-style</p>
-</details>
-<p>--style-absence-behavior</p>
-<details class="info">
-<summary>Style Absence Behavior</summary>
-<p>falldown (default) </br>
-riseup</p>
-</details>
-<p>--transparency-mode</p>
-<details class="info">
-<summary>Transparency Options</summary>
-<p>Blend </br>
-Opaque (default)</p>
-</details>
-<p>--output-folder (default: current folder in host)</p>
-</details>
-</details>
 <h2 id="remove-the-docker-images-optional">Remove the Docker Images (Optional)</h2>
 <p>If you want to delete all of the downloaded Docker images, you can use the following command:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>docker<span class="w"> </span>rmi<span class="w"> </span>--force<span class="w"> </span><span class="k">$(</span>docker<span class="w"> </span>image<span class="w"> </span>ls<span class="w"> </span>-q<span class="w"> </span>-f<span class="w"> </span><span class="nv">label</span><span class="o">=</span><span class="nv">composition</span><span class="o">=</span>citydb-3dtiler<span class="k">)</span>

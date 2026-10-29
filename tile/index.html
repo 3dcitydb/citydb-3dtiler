@@ -53,6 +53,8 @@
       
     
     
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
       <link rel="stylesheet" href="../extra_style.css">
     
       <link rel="stylesheet" href="../assets/mkdocs_puml/puml.css">
@@ -457,6 +459,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#-separate-tilesets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        --separate-tilesets
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#-style-mode" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -560,6 +573,17 @@
     <span class="md-ellipsis">
       
         --vertical-offset
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-vertical-offset-from-csv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        --vertical-offset-from-csv
       
     </span>
   </a>
@@ -695,6 +719,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#-separate-tilesets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        --separate-tilesets
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#-style-mode" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -804,6 +839,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#-vertical-offset-from-csv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        --vertical-offset-from-csv
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -865,6 +911,13 @@
 </span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="o">[</span>--tiles-version<span class="w"> </span><span class="o">{</span><span class="m">1</span>.0,1.1<span class="o">}]</span><span class="w"> </span><span class="se">\</span>
 </span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="o">[</span>--vertical-offset<span class="w"> </span><span class="o">[</span>VERTICAL_OFFSET<span class="o">]]</span>
 </span></code></pre></div>
+<h2 id="-separate-tilesets">--separate-tilesets</h2>
+<p>This option is used to specify the criteria for creating multiple tilesets. You can create separate tilesets by considering the objectclasses (Building, Wall, Window etc.) or namespaces (bldg, tun, brid etc.) of the features.</p>
+<ul>
+<li>Example : <code>--separate-tilesets objectclass</code></li>
+</ul>
+<p><a href="https://tinyurl.com/schwabingolstadt2026" target="_blank">A Sample 3D Scene contains separate tilesets</a></p>
+<p><img alt="Ingolstadt, 2026" src="../images/sample_for_separeate_tilesets.png" /></p>
 <h2 id="-style-mode">--style-mode</h2>
 <p>Style mode is used to assign material styles to features. Customizing PBR materials using the given CSV file is not the only option. There are four different style modes, and there is a mechanism (called <code>style-absence-behaviour</code>) that switches to another mode in case a style mode cannot be applied to a feature. The four style modes are like below:</p>
 <ul>
@@ -981,6 +1034,11 @@
 <p>Specify the vertical offset as a float number (for exp. 0.15 / -1.25) in meter unit. Do not use comma as decimal separator. </p>
 <ul>
 <li>Example : <code>--vertical-offset 0.15</code> | <code>--vertical-offset -0.55</code></li>
+</ul>
+<h2 id="-vertical-offset-from-csv">--vertical-offset-from-csv</h2>
+<p>Assign the vertical offsets using the CSV file. Use the dot as the decimal separator.</p>
+<ul>
+<li>Example : <code>--vertical-offset-from-csv</code></li>
 </ul>
 
 
