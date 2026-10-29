@@ -37,7 +37,6 @@ citydb-3dtiler is the main command of the application. When run with the Docker 
 | [-h, --help](#usage-syntax) | shows a help message and exit the program |  |
 | [--tiler-app](main_options.md#-tiler-app) | choose one of the compatible 3D Tile Generator app | pg2b3dm |
 | [--tilers-path](main_options.md#-tilers-path) | sets the absolute/relative path of the selected 3D Tile Generator software. | tiler_app/ |
-| [--separate-tilesets](main_options.md#-separate-tilesets) | exports separate tilesets for each objectclass or namespace |  |
 | [(Database Connection Options)](db_con_options.md) | This group is expressed as a placeholder to collectively represent the options used for configuring database connections. Options are as follows: `--db-host`,`--db-port`, `--db-name`, `--db-schema`, `--db-username`, `--db-password` |  |
 | [(Filter Options)](filter_options.md) | This group is expressed as a placeholder to collectively represent the options used for filtering the existing features. Filtering options are as follows: `--limit`, `--start-index`, `--id`, `--type-name`, `--bbox`, `--bbox-mode`, `--filter` (CQL2), `--sql-filter` |  |
 
@@ -51,7 +50,7 @@ citydb-3dtiler is the main command of the application. When run with the Docker 
 |---|---|
 | [help](#usage-syntax) | The help output shows the usage syntax and available arguments. |
 | [advise](advise.md) | Test connection to the database. Available options are as follows: `--ignore-thematic-surfaces`, `--output-file` |
-| [tile](tile.md) | Show database contents and summary information. Tiling options are as follows : `--style-mode`, `--style-absence-behaviour`, `--output-folder`, `--transparency`, `--custom-style`, `--attributes`, `--selected-attributes`, `--attribute-structure`, `--attribute-structure`, `--vertical-offset` |
+| [tile](tile.md) | Show database contents and summary information. Tiling options are as follows : `--separate-tilesets`, `--style-mode`, `--style-absence-behaviour`, `--output-folder`, `--transparency`, `--custom-style`, `--attributes`, `--selected-attributes`, `--attribute-structure`, `--attribute-structure`, `--vertical-offset` |
 
 ## Usage Syntax
 

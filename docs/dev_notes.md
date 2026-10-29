@@ -21,5 +21,3 @@ Following list includes different sources re-used during the development progres
     - shows the classes used to generate the Dynamic (invoked by the user's commandset) SQL Queries.
 - [Test Procedures & Results](includes/test_procedures.md){:target="_blank"}
     - shows the list of test procedures
-- [To-Do List](includes/to-do_list.md){:target="_blank"}
-    - A personal to-do list used to remember the bugs, missing features etc.

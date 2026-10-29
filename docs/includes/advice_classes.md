@@ -11,11 +11,8 @@ This UML diagram shows the the Classes used to generate the Advice.yml file.
 @startuml
 title UML Class Diagram 
 header
-<font color=red size=10>Last Check : 30.06.2026</font>
+<font color=red size=10>Last Check : 29.10.2026</font>
 endheader
-'footer
-'<font color=blue size=9>30.06.2026</font>
-'endfooter
 
 '!include card-style.puml
 
@@ -43,15 +40,26 @@ namespace advs <<Advise>> {
     _keytransform()
   }
   Advice -up-|> TransformedDict
+  Advice *- "*" Namespace : namespaces
+  
+  class Namespace {
+    alias : String
+    recommended_mft : Integer
+  }
+  Namespace -up-|> TransformedDict
+  Namespace *- "*" ObjectClass : objectclasses
+
   class ObjectClass {
     name : String
-    objectclass_recommendations : Integer
+    recommended_mft : Integer
+    properties : Dictionary
   }
   ObjectClass -up-> TransformedDict
-  class ObjectClassRecommendations {
-    MaximumFeatures : Integer
-  }
-  ObjectClassRecommendations -up-|> TransformedDict
+  
+  'class ObjectClassRecommendations {
+  '  MaximumFeatures : Integer
+  '}
+  'ObjectClassRecommendations -up-|> TransformedDict
 }
 @enduml
 ```
