@@ -29,7 +29,7 @@ def selected_attributes_to_list(selected_attributes):
     attributes_list = selected_attributes.split(",")
     return attributes_list
 
-def create_tileset(args, output_path=None, max_features_per_tile=None, whrs=None, attribute_list = None):
+def create_tileset(args, output_path=None, recommended_mft=None, whrs=None, attribute_list = None):
     # print("-o-o-o-o-o>>", attribute_list)
     # Drop the materials table if it is existing in DB
     drop_cascade_if_exists(args, "_materials_for_features")
@@ -52,7 +52,7 @@ def create_tileset(args, output_path=None, max_features_per_tile=None, whrs=None
     else:
         copy_materials(args)
 
-    # Populate the relevant tables
+    # Create & populate the views related with the style-mode
     crt_vw_mat_obj, crt_vw_mat_obj_fl_nm = read_sql_file("standalone_queries", "vw_material_by_objectclass.sql")
     run_sql(args, crt_vw_mat_obj, name=crt_vw_mat_obj_fl_nm)
     crt_vw_mat_pro, crt_vw_mat_pro_fl_nm = read_sql_file("standalone_queries", "vw_material_by_properties.sql")
@@ -338,7 +338,6 @@ def create_tileset(args, output_path=None, max_features_per_tile=None, whrs=None
 
     # Set the name of materialized view that would be used for tiling
     mv_name = "mv_geometries"
-    mfpt = max_features_per_tile
 
     #Test the Query
     print("(i) Info : SQL Query : \n", query)
@@ -348,60 +347,47 @@ def create_tileset(args, output_path=None, max_features_per_tile=None, whrs=None
     # print(crt_mv)
     run_sql(args, crt_mv, name=f"create_materialized_view (function) for {mv_name}")
     run_sql(args, ind_mv, name=f"index_materialized_view (function) for {mv_name}")
-    generate_tiles(args, mv_name, 'geom', 'material_data', output_path, mfpt, attribute_as_string)
-
-def summarize_advice(args):
-    advices = read_yaml(get_shared_folder_path(), "advice.yml")
-    objectclasses = advices["objectclasses"]
-    mx_ftr_pr_tl = advices["max_features"]
-    oc_attrs = []
-    for oc in objectclasses:
-        pros = oc["properties"]
-        for pro in pros:
-            oc_attrs.append(pro)
-    return { "objectclasses": objectclasses, "attribute_list": oc_attrs, "max_features_per_tile": mx_ftr_pr_tl }
+    generate_tiles(args, mv_name, 'geom', 'material_data', output_path, recommended_mft, attribute_as_string)
 
 def tile(args):
+    # Read the advice file
+    advice = read_yaml(get_shared_folder_path(), "advice.yml")
     # print(args.separate_tilesets)
     if args.separate_tilesets is not None:
         if args.separate_tilesets == "objectclass":
-            # advises = read_yaml(get_shared_folder_path(), "advice.yml")
-            # objectclasses = advises["objectclasses"]
-            advice_summary = summarize_advice(args)
-            objectclasses = advice_summary["objectclasses"]
-            for oc in objectclasses:
-                oc_name = oc["name"]
-                oc_mfpt = oc["objectclass_recommendations"]
-                oc_attrs = oc["properties"]
-
-                # Convert the property names to the lower characters (necessary for SQL)
-                oc_attrs2 = []
-                for attr in oc_attrs:
-                    if attr is not None:
-                        oc_attrs2.append(attr.lower())
-                # oc_attrs = [x.lower() for x in oc_attrs]
+            objectclass_list = [oc for ns in advice["namespaces"] for oc in ns["objectclasses"]]
+            for oc in objectclass_list:
+                # Create a folder with the same name of the objectclass
                 if args.output_folder == "shared":
-                    oc_path = create_folder(get_shared_folder_path(), oc_name)
-                    #oc_path = os.path.join(new_folder, oc_name)
+                    oc_path = create_folder(get_shared_folder_path(), oc["name"])
                 else:
                     custom_path = os.path.join(get_shared_folder_path(), args.output_folder)
-                    oc_path = create_folder(custom_path, oc_name)
-                    #oc_path = os.path.join(custom_path, oc_name)
-                
+                    oc_path = create_folder(custom_path, oc["name"])
                 # Set a Where condition for each calculator query that filters objectclasses
-                cndtn = f"oc.classname = '{oc_name}'"
-                whrs_oc = WhereElements(
-                    WhereElement(condition = cndtn))
+                cndtn = f"oc.classname = '{oc["name"]}'"
+                whrs_oc = WhereElements(WhereElement(condition = cndtn))
                 # print("HERE IS THE WHERE COND:", whrs_oc)
-                create_tileset(args, output_path=oc_path, max_features_per_tile=oc_mfpt, whrs=whrs_oc, attribute_list = oc_attrs2)
+                create_tileset(args, output_path=oc_path, recommended_mft=oc["recommended_mft"], whrs=whrs_oc, attribute_list = oc["properties"])
         elif args.separate_tilesets == "namespace":
-            advice_summary = summarize_advice(args)
-            print("hey!!!")
+            namespace_list = [ns for ns in advice["namespaces"]]
+            for ns in namespace_list:
+                #Create a folder with the same name of the namespaces
+                if args.output_folder == "shared":
+                    ns_path = create_folder(get_shared_folder_path(), ns["alias"])
+                else:
+                    custom_path = os.path.join(get_shared_folder_path(), args.output_folder)
+                    ns_path = create_folder(custom_path, ns["alias"])
+                # Set a Where condition for each calculator query that filters namespaces
+                cndtn = f"ns.alias = '{ns["alias"]}'"
+                whrs_ns = WhereElements(WhereElement(condition = cndtn))
+                create_tileset(args, output_path=ns_path, recommended_mft=ns["recommended_mft"], whrs=whrs_ns)
     else:
-        advice_summary = summarize_advice(args)
+        # advice_summary = summarize_advice(args)
         if args.output_folder == "shared":
             tileset_path = get_shared_folder_path()
         else:
             custom_path = os.path.join(get_shared_folder_path(), args.output_folder)
             tileset_path = custom_path
-        create_tileset(args, output_path=tileset_path, max_features_per_tile=advice_summary["max_features_per_tile"], attribute_list = advice_summary["attribute_list"])
+        # print(advice["recommended_mft"])
+        # create_tileset(args, output_path=tileset_path, recommended_mft=advice["recommended_mft"], attribute_list = advice_summary["attribute_list"])
+        create_tileset(args, output_path=tileset_path, recommended_mft=advice["recommended_mft"])

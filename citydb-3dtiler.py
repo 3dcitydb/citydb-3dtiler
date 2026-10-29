@@ -24,20 +24,20 @@ def main():
     description="citydb-3dtiler: Generates 3D Tiles by connecting to a 3DCityDB (v5) database instance with the provided custom arguments.")
     parser.add_argument("--tilers-path", help="Set the absolute/relative path of the selected 3D Tile Generator software.", metavar="File Path of the 3D Tiler", nargs="?", default="tiler_app/")
     parser.add_argument("--tiler-app", help="Choose one of the compatible 3D Tile Generator app.", default="pg2b3dm", choices=["pg2b3dm", "py3dtiles"])
-    parser.add_argument("--separate-tilesets", help="exports separate tilesets for each objectclass or namespace", nargs="?", default=None, choices=["objectclass", "namespace"])
     parser.add_argument("--ignore-thematic-surfaces", help="ignores the thematic surfaces that descend from AbstractThematicSurface, such as WallSurface, WindowSurface etc.", action=argparse.BooleanOptionalAction, default=False)
 
     # Subparsers used to gather together the command related arguments
     subparsers = parser.add_subparsers(help="Select one of the operations: advise, tile.", dest="command")
 
     # Advise command uses it"s own arguments
-    parser_advise = subparsers.add_parser("advise", help="generates advisement docs for the existing dataset.")
+    parser_advise = subparsers.add_parser("advise", help="generates Advice document(s) for the existing dataset.")
     #parser_advise.add_argument("--consider-appearances", action=argparse.BooleanOptionalAction, default=False)
     parser_advise.add_argument("-o", "--output-file", metavar="Output File Name", nargs="?", default="advice.yml")
     
 
     # Tile command uses it"s own arguments
     parser_tile = subparsers.add_parser("tile", help="generates 3DTiles from the existing dataset.")
+    parser_tile.add_argument("--separate-tilesets", help="exports separate tilesets for each objectclass or namespace", nargs="?", default=None, choices=["objectclass", "namespace"])
     parser_tile.add_argument("--style-mode", help="Select one of the available style-mode options.", choices=["existing-appearances", "property-based", "objectclass-based", "no-style"], default="objectclass-based")
     parser_tile.add_argument("--style-absence-behavior", help="If you want to change the appearance selection behavior of the tiling app, select one of the possible options. Default option is 'fall-down', which means that if you select a 'property-based' styling mode and there are no available predefined properties (in materials_for_features.csv file) that match your object, the tiling tool will automatically select the next styling mode ('objectclass-based' style mode) for the  instance.", choices=["fall-down", "rise-up"], default="fall-down")
     parser_tile.add_argument("-o", "--output-folder", help="Set the folder for the 3DTiles. Default value is the 'shared' folder.", metavar="Output Folder", nargs="?", default="shared")
@@ -76,7 +76,7 @@ def main():
 
     # User arguments forwarded to the relevant functions.
     if args.command == "advise":
-        print(args)
+        # print(args)
         advise(args)
     elif args.command == "tile":
         # Check if the advise command executed once or not.

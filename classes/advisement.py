@@ -29,22 +29,33 @@ class TransformedDict(MutableMapping):
     def _keytransform(self, key):
         return key
 
-class Advisement(TransformedDict):
-    def __init__(self, commandset, max_features=None, objectclasses=None, crs_code=None):
+class Advice(TransformedDict):
+    def __init__(self, commandset, recommended_mft=None, namespaces=None, crs_code=None):
         super().__init__()
         self.store["commandset"] = commandset
-        self.store["max_features"] = max_features
-        self.store["objectclasses"] = objectclasses
+        self.store["recommended_mft"] = recommended_mft
+        self.store["namespaces"] = namespaces
         self.store["used_crs_code"] = crs_code
     def _keytransform(self, key):
         return key.lower()
 
+class Namespace(TransformedDict):
+    def __init__(self, alias, recommended_mft=None, objectclasses=None):
+        super().__init__()
+        self.store["alias"] = alias
+        # self.store["exact_name"] = exact_name
+        if recommended_mft != None:
+            self.store["recommended_mft"] = recommended_mft
+        if objectclasses != None:
+            self.store["objectclasses"] = objectclasses
+
 class ObjectClass(TransformedDict):
-    def __init__(self, name, objectclass_recommendations=None, properties=None):
+    # Info : "objectclass_recommendations" replaced with "recommended_mft"
+    def __init__(self, name, recommended_mft=None, properties=None):
         super().__init__()
         self.store["name"] = name
-        if objectclass_recommendations != None:
-            self.store["objectclass_recommendations"] = objectclass_recommendations
+        if recommended_mft != None:
+            self.store["recommended_mft"] = recommended_mft
         if properties != None:
             self.store["properties"] = properties
 

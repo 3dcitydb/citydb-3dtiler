@@ -1,4 +1,4 @@
-# Advisement Classes
+# Advice Classes
 
 This UML diagram shows the the Classes used to generate the Advice.yml file.
 
@@ -34,7 +34,7 @@ namespace advs <<Advise>> {
     _keytransform()
   }
   TransformedDict -up-|> MutableMapping
-  class Advisement {
+  class Advice {
     CommandSet : String
     MaximumFeatures : Integer
     ObjectClasses : List
@@ -42,7 +42,7 @@ namespace advs <<Advise>> {
     ---
     _keytransform()
   }
-  Advisement -up-|> TransformedDict
+  Advice -up-|> TransformedDict
   class ObjectClass {
     name : String
     objectclass_recommendations : Integer

@@ -24,9 +24,9 @@ endheader
 ****_ read_yaml
 ****_ write_yaml
 **[#silver] <&briefcase> classes
-***[#ghostwhite] <&briefcase> advisement
+***[#ghostwhite] <&briefcase> Advice
 ****_ TransformedDict (Abstract)
-****_ Advisement
+****_ Advice
 ****_ ObjectClass
 ****_ ObjectClassRecommendations
 ***[#ghostwhite] <&briefcase> sql_blocks

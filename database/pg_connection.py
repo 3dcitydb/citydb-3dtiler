@@ -61,8 +61,8 @@ def get_query_results(args, query, name="not-specified"):
         
     except OSError as err:
         print(f"Database error:\n{err}")
-    finally:
-        print(f"(i) {name} executed,  and the results were obtained.")
+    # finally:
+    #     print(f"(i) {name} executed,  and the results were obtained.")
     return result
 
 def run_sql(args, query, name="not-specified"):
