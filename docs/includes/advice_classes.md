@@ -54,7 +54,7 @@ namespace advs <<Advise>> {
     recommended_mft : Integer
     properties : Dictionary
   }
-  ObjectClass -up-> TransformedDict
+  ObjectClass -up-|> TransformedDict
   
   'class ObjectClassRecommendations {
   '  MaximumFeatures : Integer
