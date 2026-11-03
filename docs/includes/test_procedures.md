@@ -8,8 +8,9 @@ This diagram shows the list of test procedures to be carried out in order to per
 @startmindmap
 title Test Procedure of citydb-3dtiler application
 header
-<font color=indianred size=12><b>Last Check : 02.07.2026</b></font>
-<font color=indianred size=12><b>Expected Release : 0.9.4</b></font>
+<font color=indianred size=12><b>Last Check : 03.11.2026</b></font>
+<font color=indianred size=12><b>Expected Release : 0.9.5</b></font>
+<font color=indianred size=12><b>Checks made on Tokio-CityGML3 (UDX)</b></font>
 endheader
 
 '!include card-style.puml
@@ -19,47 +20,23 @@ endheader
 ** help <&check>
 
 ** advise
-*** for single tileset <&check>
-*** for separate tilesets <&check>
+*** advise (T001) <&check>
+*** --ignore-thematic-surfaces advise (T002) <&check>
+
+
 
 ** (filter options)
-***: filter by id(s) <&check>
-"--id _20210907161723_295,_20210907161723_1"
-",_20210907161723_220"
-;
-***: filter by TypeName(s) (ObjectClass) <&check>
-"--type-name WallSurface,OuterFloorSurface,OuterCeilingSurface"
-;
-***: limit the total feature number <&check>
-"--limit 1000"
-;
-***: use start-index <&check>
-"--start-index 200000"
-;
-****: use limit and start-index together <&check>
-"--limit 100000 --start-index 200000"
-;
-****: use type-name, limit and start-index together <&check>
-"--type-name WallSurface,OuterFloorSurface,OuterCeilingSurface,RoofSurface"
-"--limit 100000 --start-index 200000"
-;
-***: use bbox filtering with CRS code <&check>
-"--bbox 564822,5932935,566924,5934737,25832"
-;
-****: use bbox filtering without CRS code <&check>
-"--bbox 564822,5932935,566924,5934737"
-;
-****: use bbox filtering in intersects-precise mode <&check>
-"--bbox-mode intersects-precise"
-;
-****: use bbox filtering with contains mode <&check>
-"--bbox-mode contains"
-;
-****: use bbox filtering with contains-precise mode <&check>
-"--bbox-mode contains-precise"
-;
-***: use filter argument to use CQL2 Expressions <&check>
-"--filter gen_grundhoehenn > 20 AND gen_grundflaeche2d > 30"
+
+***: filter by id and type-name (T005) <&check>
+
+***: filter by limit and start-index together (T006) <&check>
+
+***: filter by bbox filtering with CRS code (T007) <&check>
+
+***: filter by bbox filtering with contains-precise mode <&check>
+
+***: filter by CQL2 Expressions (--filter) <&check>
+"--filter bldg_storeysaboveground > 5 AND con_height__con_value > 12"
 "--attributes selected "
 "--selected-attributes gen_grundhoehenn,gen_grundflaeche2d"
 ;
@@ -72,9 +49,8 @@ endheader
 
 ** tile
 
-***: Single Tileset
-<font color=gray><i>tile</i></font>
-;
+***: tile (T003) <&check>
+
 ****: Custom Color Set 
 <font color=gray><i>tile --custom-style tum_colors.csv</i></font>
 ;
@@ -131,11 +107,12 @@ endheader
 <font color=gray><i>--vertical-offset 3.5</i></font>
 ;
 
-
+***: --ignore-thematic-surfaces tile (T004) <&check>
 
 legend left
 Recommended Datasets:
   Samplycity : https://muratkendir.github.io/samplycity/
+  Tokio CityGML3 UDX : https://www.geospatial.jp/ckan/dataset/plateau-tokyo-takeshiba-cg3-sample
   Hamburg LoD3 (CG2) : https://suche.transparenz.hamburg.de/dataset/3d-gebaeudemodell-lod3-0-hh-hamburg17
   Switzerland (CG2) : https://www.swisstopo.admin.ch/de/landschaftmodell-swissbuildings3d-3-0-beta#swissBUILDINGS3D-3.0-Beta---Download
 endlegend

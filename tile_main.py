@@ -243,6 +243,10 @@ def create_tileset(args, output_path=None, recommended_mft=None, whrs=None, attr
         # If the style-mode is different than property-based and the CSV file contains offsets
         krnl_query.select_elements[0].field = f"st_translate(gmdt.geometry, 0, 0, mtr_oc.vertical_offset)"
 
+    if args.ignore_thematic_surfaces is True:
+        no_thematic_surfaces = WhereElement(condition=f"oc.id not in (612,715,15,718,713,203,710,615,711,300,614,716,714,712,613,709,1503,1502,719)")
+        krnl_query.where_elements.add(no_thematic_surfaces)
+
     # Add the filtering options
     # if limit & offset (start-index) 
     if args.limit is not None or args.start_index is not None:
