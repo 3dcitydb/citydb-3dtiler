@@ -83,3 +83,5 @@
     - [✔] "Advisement" class's name changed as "Advice". Check the mkdocs repo for the changes.
     - [ ] Is the "attribute_list" necessary for the "create_tileset" function? Check that with the attribute selection arguments.
     - [ ] Check the csv-based-vertical-offsets.
+- 06.11.2026
+    - [ ] Stuck with the special characters in Japanase deataset

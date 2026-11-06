@@ -16,98 +16,30 @@ endheader
 '!include card-style.puml
 
 * Tests
-
 ** help <&check>
-
 ** advise
 *** advise (T001) <&check>
-*** --ignore-thematic-surfaces advise (T002) <&check>
-
-
-
+*** --ignore-thematic-surfaces advise (T002 & T004) <&check>
 ** (filter options)
-
 ***: filter by id and type-name (T005) <&check>
-
 ***: filter by limit and start-index together (T006) <&check>
-
 ***: filter by bbox filtering with CRS code (T007) <&check>
-
-***: filter by bbox filtering with contains-precise mode <&check>
-
-***: filter by CQL2 Expressions (--filter) <&check>
-"--filter bldg_storeysaboveground > 5 AND con_height__con_value > 12"
-"--attributes selected "
-"--selected-attributes gen_grundhoehenn,gen_grundflaeche2d"
-;
-***: use sql-filter <&check>
-"gen_citygrid_unitid.pro_value like '2021%'"
-"AND st_dwithin(st_geomfromtext('POINT(566924 5934737)',25832), gmdt.geometry, 2000)"
-"--attributes selected \"
-"--selected-attributes gen_citygrid_unitid"
-;
-
+***: filter by bbox filtering with contains-precise mode (T008) <&check>
+***: filter by CQL2 Expressions (--filter / T009) <&check>
+***: use sql-filter (T010) <&check>
 ** tile
-
 ***: tile (T003) <&check>
+****: Custom Color Set (T014) <&check>
+****: Transparency Mode (T014) <&check>
+****: To a Custom Folder (T013) <&check>
+****: No Style Mode (T013) <&check>
+****: All Attributes in tabular format
+****: Selected Attributes in nested/json format
+****: Property-based Color Set (T015) <&check>
+****: Selected Attributes in nested format
+***: Separate Tilesets (objectclass T011) <&check>
+***: Separate Tilesets (namespace T012) <&check>
 
-****: Custom Color Set 
-<font color=gray><i>tile --custom-style tum_colors.csv</i></font>
-;
-****: Property-based Color Set
-<font color=gray><i>tile --style-mode property-based</i></font>
-;
-****: Transparency Mode
-<font color=gray><i>tile --transparency blend</i></font>
-;
-****: To a Custom Folder
-<font color=gray><i>tile --output-folder</i></font>
-;
-****: No Style Mode
-<font color=gray><i>tile --style-mode no-style</i></font>
-;
-***: For Separate Tilesets (objectclass)
-<font color=gray><i>--separate-tilesets objectclass \ </i></font>
-<font color=gray><i>tile</i></font>
-;
-****: Property-based Color Set
-<font color=gray><i>--separate-tilesets objectclass \ </i></font>
-<font color=gray><i>tile \ </i></font>
-<font color=gray><i>--style-mode property-based</i></font>
-;
-*****: Selected Attributes in tabular format
-<font color=gray><i>--separate-tilesets objectclass \ </i></font>
-<font color=gray><i>tile \ </i></font>
-<font color=gray><i> --style-mode property-based \ </i></font>
-<font color=gray><i>--attributes selected \ </i></font>
-<font color=gray><i>--selected-attributes  core_name,gen_objektart</i></font>
-;
-*****: Selected Attributes in nested/json format
-<font color=gray><i>--separate-tilesets objectclass \ </i></font>
-<font color=gray><i>tile \ </i></font>
-<font color=gray><i>--style-mode property-based \ </i></font>
-<font color=gray><i>--attributes selected \ </i></font>
-<font color=gray><i>--attribute-structure nested \ </i></font>
-<font color=gray><i>--selected-attributes core_name,gen_objektart,con_height</i></font>
-;
-*****: All Attributes in nested/json format
-<font color=gray><i> --separate-tilesets objectclass \ </i></font>
-<font color=gray><i>tile \ </i></font>
-<font color=gray><i>--style-mode property-based \ </i></font>
-<font color=gray><i>--attributes all \ </i></font>
-<font color=gray><i>--attribute-structure nested</i></font>
-;
-*****: Separate Tilesets & Property-based Color Set & All Attributes in nested/json format
-<font color=gray><i>--separate-tilesets objectclass tile \ </i></font>
-<font color=gray><i>tile \ </i></font>
-<font color=gray><i>--style-mode property-based \ </i></font>
-<font color=gray><i>--attributes selected \ </i></font>
-<font color=gray><i>--attribute-structure nested \ </i></font>
-<font color=gray><i>--tiles-version 1.0 \ </i></font>
-<font color=gray><i>--vertical-offset 3.5</i></font>
-;
-
-***: --ignore-thematic-surfaces tile (T004) <&check>
 
 legend left
 Recommended Datasets:

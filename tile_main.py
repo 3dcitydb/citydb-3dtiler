@@ -344,7 +344,7 @@ def create_tileset(args, output_path=None, recommended_mft=None, whrs=None, attr
     mv_name = "mv_geometries"
 
     #Test the Query
-    print("(i) Info : SQL Query : \n", query)
+    # print("(i) Info : SQL Query : \n", query)
     
     crt_mv = create_materialized_view(mv_name, str(query))
     ind_mv = index_materialized_view(mv_name, 'geom')
@@ -394,4 +394,10 @@ def tile(args):
             tileset_path = custom_path
         # print(advice["recommended_mft"])
         # create_tileset(args, output_path=tileset_path, recommended_mft=advice["recommended_mft"], attribute_list = advice_summary["attribute_list"])
-        create_tileset(args, output_path=tileset_path, recommended_mft=advice["recommended_mft"])
+        props = []
+        for ns in advice["namespaces"]:
+            for oc in ns["objectclasses"]:
+                props.extend(oc["properties"])
+        props = list(set(props))
+        print(props)
+        create_tileset(args, output_path=tileset_path, recommended_mft=advice["recommended_mft"], attribute_list = props)

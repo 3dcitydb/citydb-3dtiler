@@ -69,7 +69,7 @@ python3 citydb-3dtiler.py \
 tile
 
 ## T008
-
+```bash
 python3 citydb-3dtiler.py \
 --db-host 172.17.0.2 --db-port 5432 \
 --db-name citydb-visualizer \
@@ -78,15 +78,110 @@ python3 citydb-3dtiler.py \
 --bbox 139.7496291,35.6608369,139.7568912,35.6651614,6697 \
 --bbox-mode contains-precise \
 tile
+```
 
 ## T009
 
+```bash
 python3 citydb-3dtiler.py \
 --db-host 172.17.0.2 --db-port 5432 \
 --db-name citydb-visualizer \
 --db-schema citydb \
 --db-username tester --db-password 123456 \
 --filter "bldg_storeysaboveground > 5 AND con_height__con_value > 12" \
-tile \ 
+tile \
 --attributes selected \
 --selected-attributes bldg_storeysaboveground,con_height__con_value
+```
+
+## T010
+
+```bash
+python3 citydb-3dtiler.py \
+--db-host 172.17.0.2 --db-port 5432 \
+--db-name citydb-visualizer \
+--db-schema citydb \
+--db-username tester --db-password 123456 \
+--sql-filter "bldg_usage.pro_value like '4%' AND st_intersects(st_buffer(st_geomfromtext('LINESTRING(139.754951 35.668526, 139.753383 35.665119, 139.757382 35.663719)', 6697), 0.0003), ~geom)" \
+tile \
+--attributes selected \
+--selected-attributes bldg_usage
+```
+
+## T011
+
+```bash
+python3 citydb-3dtiler.py \
+--db-host 172.17.0.2 --db-port 5432 \
+--db-name citydb-visualizer \
+--db-schema citydb \
+--db-username tester --db-password 123456 \
+tile \
+--separate-tilesets objectclass
+```
+
+## T012
+
+```bash
+python3 citydb-3dtiler.py \
+--db-host 172.17.0.2 --db-port 5432 \
+--db-name citydb-visualizer \
+--db-schema citydb \
+--db-username tester --db-password 123456 \
+tile \
+--separate-tilesets namespace
+```
+
+## T013
+
+```bash
+python3 citydb-3dtiler.py \
+--db-host 172.17.0.2 --db-port 5432 \
+--db-name citydb-visualizer \
+--db-schema citydb \
+--db-username tester --db-password 123456 \
+tile \
+--style-mode no-style \
+--output-folder withnostyle
+```
+
+## T014
+
+```bash
+python3 citydb-3dtiler.py \
+--db-host 172.17.0.2 --db-port 5432 \
+--db-name citydb-visualizer \
+--db-schema citydb \
+--db-username tester --db-password 123456 \
+tile \
+--custom-style tum_colors.csv \
+--transparency blend
+```
+
+## T015
+
+```bash
+python3 citydb-3dtiler.py \
+--db-host 172.17.0.2 --db-port 5432 \
+--db-name citydb-visualizer \
+--db-schema citydb \
+--db-username tester --db-password 123456 \
+--type-name Building \
+tile \
+--style-mode property-based \
+--attributes selected \
+--selected-attributes gen_町・丁目コード
+```
+
+## T016
+
+```bash
+python3 citydb-3dtiler.py \
+--db-host 172.17.0.2 --db-port 5432 \
+--db-name citydb-visualizer \
+--db-schema citydb \
+--db-username tester --db-password 123456 \
+tile \
+--style-mode property-based \
+--attributes all
+```

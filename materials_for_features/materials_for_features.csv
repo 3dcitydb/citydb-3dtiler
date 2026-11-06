@@ -1,6 +1,12 @@
 namespace_of_classname,classname,namespace_of_property,property_name,column_name_of_property_value,property_value,emmisive_color,pbr_metallic_roughness_base_color,pbr_metallic_roughness_metallic_roughness,pbr_specular_glossiness_diffuse_color,pbr_specular_glossiness_specular_glossiness,vertical_offset
 ,anything_else,,,,,,#ffff00ff,#000000,,,0.00
 bldg,Building,,,,,,#999999ff,#000000,,,0.00
+bldg,Building,gen,町・丁目コード,val_string,1,,#ba9fc0ff,#000000,,,0.00
+bldg,Building,gen,町・丁目コード,val_string,2,,#b54545ff,#000000,,,0.00
+bldg,Building,gen,町・丁目コード,val_string,3,,#90bac3ff,#000000,,,0.00
+bldg,Building,gen,町・丁目コード,val_string,4,,#b9937fff,#000000,,,0.00
+bldg,Building,gen,町・丁目コード,val_string,5,,#659460ff,#000000,,,0.00
+bldg,Building,gen,町・丁目コード,val_string,6,,#655491ff,#000000,,,0.00
 bldg,BuildingConstructiveElement,,,,,,#86909cff,#000000,,,0.00
 bldg,BuildingFurniture,,,,,,#e67322ff,#000000,,,0.00
 bldg,BuildingInstallation,,,,,,#647a7aff,#000000,,,0.00
