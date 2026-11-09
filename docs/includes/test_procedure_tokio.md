@@ -175,6 +175,8 @@ tile \
 
 ## T016
 
+> FAILED! UNICODE ATTRIBUTE NAMES MUST BE ACCEPTED (via allow_unicode=True option in io_tools/yaml.py), BUT THE PROBLEM IS THAT SOME SPECIAL CHARACTERS (plus, slash etc.) EXISTING IN THE PROPERTY NAME (for exp: Tokio, Takeshiba dataset, property.name = '13+区市町村コード+大字・町コード+町・丁目コード') CAN NOT BE USED IN SQL QUERIES.
+
 ```bash
 python3 citydb-3dtiler.py \
 --db-host 172.17.0.2 --db-port 5432 \
@@ -182,6 +184,44 @@ python3 citydb-3dtiler.py \
 --db-schema citydb \
 --db-username tester --db-password 123456 \
 tile \
---style-mode property-based \
 --attributes all
+```
+
+## T017
+
+```bash
+python3 citydb-3dtiler.py \
+--db-host 172.17.0.2 --db-port 5432 \
+--db-name citydb-visualizer \
+--db-schema citydb \
+--db-username tester --db-password 123456 \
+tile \
+--attributes selected \
+--selected-attributes core_name,bldg_usage
+```
+
+## T018
+
+```bash
+python3 citydb-3dtiler.py \
+--db-host 172.17.0.2 --db-port 5432 \
+--db-name citydb-visualizer \
+--db-schema citydb \
+--db-username tester --db-password 123456 \
+tile \
+--attributes selected \
+--selected-attributes core_name,bldg_usage,con_height,bldg_address \
+--attribute-structure nested
+```
+
+## T019
+
+```bash
+python3 citydb-3dtiler.py \
+--db-host 172.17.0.2 --db-port 5432 \
+--db-name citydb-visualizer \
+--db-schema citydb \
+--db-username tester --db-password 123456 \
+tile \
+--vertical-offset-from-csv
 ```

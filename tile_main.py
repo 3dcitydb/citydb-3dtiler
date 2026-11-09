@@ -348,7 +348,7 @@ def create_tileset(args, output_path=None, recommended_mft=None, whrs=None, attr
     
     crt_mv = create_materialized_view(mv_name, str(query))
     ind_mv = index_materialized_view(mv_name, 'geom')
-    # print(crt_mv)
+    print(crt_mv)
     run_sql(args, crt_mv, name=f"create_materialized_view (function) for {mv_name}")
     run_sql(args, ind_mv, name=f"index_materialized_view (function) for {mv_name}")
     generate_tiles(args, mv_name, 'geom', 'material_data', output_path, recommended_mft, attribute_as_string)
@@ -399,5 +399,5 @@ def tile(args):
             for oc in ns["objectclasses"]:
                 props.extend(oc["properties"])
         props = list(set(props))
-        print(props)
+        # print(props)
         create_tileset(args, output_path=tileset_path, recommended_mft=advice["recommended_mft"], attribute_list = props)

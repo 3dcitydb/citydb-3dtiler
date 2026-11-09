@@ -33,10 +33,12 @@ endheader
 ****: Transparency Mode (T014) <&check>
 ****: To a Custom Folder (T013) <&check>
 ****: No Style Mode (T013) <&check>
-****: All Attributes in tabular format
-****: Selected Attributes in nested/json format
+****: All Attributes in tabular format (T016 - !Failed) <&thumb-down>
+****: Selected Attributes in tabular format (T017) <&check>
+****: Selected Attributes in nested/json format (T018) <&check>
 ****: Property-based Color Set (T015) <&check>
-****: Selected Attributes in nested format
+****: Selected Attributes in nested format (T018) <&check>
+****: Vertical Offsets from CSV file (T019) <&checked>
 ***: Separate Tilesets (objectclass T011) <&check>
 ***: Separate Tilesets (namespace T012) <&check>
 
@@ -57,6 +59,8 @@ endlegend
 The following list contains the links of the previous tests carried out by following the test procedures.
 Test procedures are usually handled before publishing a new release.
 
+- Before release 0.9.5
+    - [Tests done with Tokio Takeshiba dataset](https://www.3dcitydb.net/3dcitydb/fileadmin/public/kendir/#tokio_cg3_2023){:target="_blank"}
 - Before release 0.9.3
     - [Tests done with Swisstopo dataset](https://www.3dcitydb.net/3dcitydb/fileadmin/public/kendir/#bern_full_procedure){:target="_blank"}
 - Before release 0.9.2
