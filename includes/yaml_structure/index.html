@@ -1,0 +1,592 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://3dcitydb.github.io/citydb-3dtiler/includes/yaml_structure/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../images/tiles_light.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Structure of the Advice file in YAML Format - citydb-3dtiler</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../extra_style.css">
+    
+      <link rel="stylesheet" href="../../assets/mkdocs_puml/puml.css">
+    
+      <link rel="stylesheet" href="../../assets/mkdocs_puml/interaction.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#structure-of-the-advice-file-in-yaml-format" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="citydb-3dtiler" class="md-header__button md-logo" aria-label="citydb-3dtiler" data-md-component="logo">
+      
+  <img src="../../images/tiles_light.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            citydb-3dtiler
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Structure of the Advice file in YAML Format
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="cyan"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/3dcitydb/citydb-3dtiler" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    3dcitydb/citydb-3dtiler
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="citydb-3dtiler" class="md-nav__button md-logo" aria-label="citydb-3dtiler" data-md-component="logo">
+      
+  <img src="../../images/tiles_light.png" alt="logo">
+
+    </a>
+    citydb-3dtiler
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/3dcitydb/citydb-3dtiler" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    3dcitydb/citydb-3dtiler
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    citydb-3dtiler
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../main_options/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Main Options
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../db_con_options/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Database Con. Options
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../filter_options/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Filter Options
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advise/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    advise Command
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    tile Command
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../samples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sample Commands
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.81 10.25c-.06-.04-.56-.43-1.64-.43-.28 0-.56.03-.84.08-.21-1.4-1.38-2.11-1.43-2.14l-.29-.17-.18.27c-.24.36-.43.77-.51 1.19-.2.8-.08 1.56.33 2.21-.49.28-1.29.35-1.46.35H2.62c-.34 0-.62.28-.62.63 0 1.15.18 2.3.58 3.38.45 1.19 1.13 2.07 2 2.61.98.6 2.59.94 4.42.94.79 0 1.61-.07 2.42-.22 1.12-.2 2.2-.59 3.19-1.16A8.3 8.3 0 0 0 16.78 16c1.05-1.17 1.67-2.5 2.12-3.65h.19c1.14 0 1.85-.46 2.24-.85.26-.24.45-.53.59-.87l.08-.24zm-17.96.99h1.76c.08 0 .16-.07.16-.16V9.5c0-.08-.07-.16-.16-.16H3.85c-.09 0-.16.07-.16.16v1.58c.01.09.07.16.16.16m2.43 0h1.76c.08 0 .16-.07.16-.16V9.5c0-.08-.07-.16-.16-.16H6.28c-.09 0-.16.07-.16.16v1.58c.01.09.07.16.16.16m2.47 0h1.75c.1 0 .17-.07.17-.16V9.5c0-.08-.06-.16-.17-.16H8.75c-.08 0-.15.07-.15.16v1.58c0 .09.06.16.15.16m2.44 0h1.77c.08 0 .15-.07.15-.16V9.5c0-.08-.06-.16-.15-.16h-1.77c-.08 0-.15.07-.15.16v1.58c0 .09.07.16.15.16M6.28 9h1.76c.08 0 .16-.09.16-.18V7.25c0-.09-.07-.16-.16-.16H6.28c-.09 0-.16.06-.16.16v1.57c.01.09.07.18.16.18m2.47 0h1.75c.1 0 .17-.09.17-.18V7.25c0-.09-.06-.16-.17-.16H8.75c-.08 0-.15.06-.15.16v1.57c0 .09.06.18.15.18m2.44 0h1.77c.08 0 .15-.09.15-.18V7.25c0-.09-.07-.16-.15-.16h-1.77c-.08 0-.15.06-.15.16v1.57c0 .09.07.18.15.18m0-2.28h1.77c.08 0 .15-.07.15-.16V5c0-.1-.07-.17-.15-.17h-1.77c-.08 0-.15.06-.15.17v1.56c0 .08.07.16.15.16m2.46 4.52h1.76c.09 0 .16-.07.16-.16V9.5c0-.08-.07-.16-.16-.16h-1.76c-.08 0-.15.07-.15.16v1.58c0 .09.07.16.15.16"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    citydb-3dtiler Docker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev_notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="structure-of-the-advice-file-in-yaml-format">Structure of the Advice file in YAML Format</h1>
+<div class='puml-container'><div class="puml light" style=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" data-diagram-type="YAML" style="width:1225px;height:533px;background:#FFFFFF;" width="1225px" height="533px" viewBox="0 0 1225 533" zoomAndPan="magnify" preserveAspectRatio="xMidYMid meet" contentStyleType="text/css" class="diagram"><?plantuml 1.2026.9beta4?><defs/><g font-family="sans-serif" lengthAdjust="spacing"><g class="title"><text x="503.121" y="32.995" fill="#000" font-size="14" textLength="217.595" font-weight="700">Structure of the Advice File</text></g><rect x="10" y="340.703" width="522.264" height="81.188" fill="#F1F1F1" style="stroke:#F1F1F1;stroke-width:1.5;" rx="5" ry="5"/><text x="15" y="355.698" fill="#000" font-size="14" textLength="101.049" font-weight="700">commandset</text><text x="171.863" y="355.698" fill="#000" font-size="14" textLength="13.351">   </text><line x1="166.863" y1="340.703" x2="166.863" y2="361" style="stroke:#000;stroke-width:1;"/><line x1="10" y1="361" x2="532.264" y2="361" style="stroke:#000;stroke-width:1;"/><text x="15" y="375.995" fill="#000" font-size="14" textLength="97.426" font-weight="700">namespaces</text><text x="171.863" y="375.995" fill="#000" font-size="14" textLength="13.351">   </text><line x1="166.863" y1="361" x2="166.863" y2="381.297" style="stroke:#000;stroke-width:1;"/><rect x="11.5" y="381.297" width="520.264" height="20.297" fill="#CCFF02" style="stroke:#CCFF02;stroke-width:1;" rx="2" ry="2"/><line x1="10" y1="381.297" x2="532.264" y2="381.297" style="stroke:#000;stroke-width:1;"/><text x="15" y="396.292" fill="#000" font-size="14" textLength="146.863" font-weight="700">recommended_mft</text><text x="171.863" y="396.292" fill="#000" font-size="14" textLength="355.4">Recommended Maximum Feature Number per Tile</text><line x1="166.863" y1="381.297" x2="166.863" y2="401.594" style="stroke:#000;stroke-width:1;"/><line x1="10" y1="401.594" x2="532.264" y2="401.594" style="stroke:#000;stroke-width:1;"/><text x="15" y="416.589" fill="#000" font-size="14" textLength="112.786" font-weight="700">used_crs_code</text><text x="171.863" y="416.589" fill="#000" font-size="14" textLength="260.442">The EPSG code used in the 3DCityDB</text><line x1="166.863" y1="401.594" x2="166.863" y2="421.891" style="stroke:#000;stroke-width:1;"/><rect x="10" y="340.703" width="522.264" height="81.188" fill="none" style="stroke:#000;stroke-width:1.5;" rx="5" ry="5"/><rect x="569" y="47.297" width="189.888" height="385.641" fill="#F1F1F1" style="stroke:#F1F1F1;stroke-width:1.5;" rx="5" ry="5"/><text x="574" y="62.292" fill="#000" font-size="14" textLength="34.624">bbox</text><line x1="569" y1="67.594" x2="758.888" y2="67.594" style="stroke:#000;stroke-width:1;"/><text x="574" y="82.589" fill="#000" font-size="14" textLength="81.327">bbox_mode</text><line x1="569" y1="87.891" x2="758.888" y2="87.891" style="stroke:#000;stroke-width:1;"/><text x="574" y="102.886" fill="#000" font-size="14" textLength="69.877">command</text><line x1="569" y1="108.188" x2="758.888" y2="108.188" style="stroke:#000;stroke-width:1;"/><text x="574" y="123.183" fill="#000" font-size="14" textLength="54.995">db_host</text><line x1="569" y1="128.484" x2="758.888" y2="128.484" style="stroke:#000;stroke-width:1;"/><text x="574" y="143.479" fill="#000" font-size="14" textLength="64.477">db_name</text><line x1="569" y1="148.781" x2="758.888" y2="148.781" style="stroke:#000;stroke-width:1;"/><text x="574" y="163.776" fill="#000" font-size="14" textLength="91.485">db_password</text><line x1="569" y1="169.078" x2="758.888" y2="169.078" style="stroke:#000;stroke-width:1;"/><text x="574" y="184.073" fill="#000" font-size="14" textLength="53.471">db_port</text><line x1="569" y1="189.375" x2="758.888" y2="189.375" style="stroke:#000;stroke-width:1;"/><text x="574" y="204.37" fill="#000" font-size="14" textLength="79.468">db_schema</text><line x1="569" y1="209.672" x2="758.888" y2="209.672" style="stroke:#000;stroke-width:1;"/><text x="574" y="224.667" fill="#000" font-size="14" textLength="95.013">db_username</text><line x1="569" y1="229.969" x2="758.888" y2="229.969" style="stroke:#000;stroke-width:1;"/><text x="574" y="244.964" fill="#000" font-size="14" textLength="32.566">filter</text><line x1="569" y1="250.266" x2="758.888" y2="250.266" style="stroke:#000;stroke-width:1;"/><text x="574" y="265.261" fill="#000" font-size="14" textLength="12.776">id</text><line x1="569" y1="270.563" x2="758.888" y2="270.563" style="stroke:#000;stroke-width:1;"/><text x="574" y="285.558" fill="#000" font-size="14" textLength="179.888">ignore_thematic_surfaces</text><line x1="569" y1="290.859" x2="758.888" y2="290.859" style="stroke:#000;stroke-width:1;"/><text x="574" y="305.854" fill="#000" font-size="14" textLength="30.796">limit</text><line x1="569" y1="311.156" x2="758.888" y2="311.156" style="stroke:#000;stroke-width:1;"/><text x="574" y="326.151" fill="#000" font-size="14" textLength="74.498">output_file</text><line x1="569" y1="331.453" x2="758.888" y2="331.453" style="stroke:#000;stroke-width:1;"/><text x="574" y="346.448" fill="#000" font-size="14" textLength="59.637">sql_filter</text><line x1="569" y1="351.75" x2="758.888" y2="351.75" style="stroke:#000;stroke-width:1;"/><text x="574" y="366.745" fill="#000" font-size="14" textLength="78.155">start_index</text><line x1="569" y1="372.047" x2="758.888" y2="372.047" style="stroke:#000;stroke-width:1;"/><text x="574" y="387.042" fill="#000" font-size="14" textLength="60.99">tiler_app</text><line x1="569" y1="392.344" x2="758.888" y2="392.344" style="stroke:#000;stroke-width:1;"/><text x="574" y="407.339" fill="#000" font-size="14" textLength="73.76">tilers_path</text><line x1="569" y1="412.641" x2="758.888" y2="412.641" style="stroke:#000;stroke-width:1;"/><text x="574" y="427.636" fill="#000" font-size="14" textLength="77.978">type_name</text><rect x="569" y="47.297" width="189.888" height="385.641" fill="none" style="stroke:#000;stroke-width:1.5;" rx="5" ry="5"/><rect x="592.5" y="451.797" width="142.836" height="60.891" fill="#F1F1F1" style="stroke:#F1F1F1;stroke-width:1.5;" rx="5" ry="5"/><text x="597.5" y="466.792" fill="#000" font-size="14" textLength="13.351">   </text><line x1="592.5" y1="472.094" x2="735.336" y2="472.094" style="stroke:#000;stroke-width:1;"/><text x="597.5" y="487.089" fill="#000" font-size="14" textLength="13.351">   </text><line x1="592.5" y1="492.391" x2="735.336" y2="492.391" style="stroke:#000;stroke-width:1;"/><text x="597.5" y="507.386" fill="#000" font-size="14" textLength="132.836">recommended_mft</text><rect x="592.5" y="451.797" width="142.836" height="60.891" fill="none" style="stroke:#000;stroke-width:1.5;" rx="5" ry="5"/><rect x="796" y="443.148" width="237.779" height="20.297" fill="#F1F1F1" style="stroke:#F1F1F1;stroke-width:1.5;" rx="5" ry="5"/><text x="801" y="458.144" fill="#000" font-size="14" textLength="36.825" font-weight="700">alias</text><text x="847.825" y="458.144" fill="#000" font-size="14" textLength="180.954">Shorten name of package</text><line x1="842.825" y1="443.148" x2="842.825" y2="463.445" style="stroke:#000;stroke-width:1;"/><rect x="796" y="443.148" width="237.779" height="20.297" fill="none" style="stroke:#000;stroke-width:1.5;" rx="5" ry="5"/><rect x="845.5" y="481.148" width="139.314" height="20.297" fill="#F1F1F1" style="stroke:#F1F1F1;stroke-width:1.5;" rx="5" ry="5"/><text x="850.5" y="496.144" fill="#000" font-size="14" textLength="105.964" font-weight="700">objectclasses</text><text x="966.464" y="496.144" fill="#000" font-size="14" textLength="13.351">   </text><line x1="961.464" y1="481.148" x2="961.464" y2="501.445" style="stroke:#000;stroke-width:1;"/><rect x="845.5" y="481.148" width="139.314" height="20.297" fill="none" style="stroke:#000;stroke-width:1.5;" rx="5" ry="5"/><rect x="1071" y="460.797" width="142.836" height="60.891" fill="#F1F1F1" style="stroke:#F1F1F1;stroke-width:1.5;" rx="5" ry="5"/><text x="1076" y="475.792" fill="#000" font-size="14" textLength="39.703">name</text><line x1="1071" y1="481.094" x2="1213.836" y2="481.094" style="stroke:#000;stroke-width:1;"/><text x="1076" y="496.089" fill="#000" font-size="14" textLength="71.75">properties</text><line x1="1071" y1="501.391" x2="1213.836" y2="501.391" style="stroke:#000;stroke-width:1;"/><text x="1076" y="516.386" fill="#000" font-size="14" textLength="132.836">recommended_mft</text><rect x="1071" y="460.797" width="142.836" height="60.891" fill="none" style="stroke:#000;stroke-width:1.5;" rx="5" ry="5"/><path d="M519.5,351.297 L532.5,351.297 C542.833,351.297 552.77,349.262 562.228,345.742" style="stroke:#000;stroke-width:1;stroke-dasharray:3,3;" fill="none"/><path d="M563.417,348.598 L564.369,344.851 L561.04,342.887 L569.366,342.771 L563.417,348.598" fill="#000"/><ellipse cx="519.5" cy="351.297" rx="3" ry="3" fill="#000" style="stroke:#000;stroke-width:1;"/><path d="M724.5,462.297 L737.5,462.297 C754.043,462.297 771.445,461.9 788.614,461.273" style="stroke:#000;stroke-width:1;stroke-dasharray:3,3;" fill="none"/><path d="M788.736,464.42 L790.975,461.182 L788.493,458.125 L796.483,460.969 L788.736,464.42" fill="#000"/><ellipse cx="724.5" cy="462.297" rx="3" ry="3" fill="#000" style="stroke:#000;stroke-width:1;"/><path d="M972.5,491.297 L985.5,491.297 C1010.985,491.297 1038.804,491.297 1063.826,491.297" style="stroke:#000;stroke-width:1;stroke-dasharray:3,3;" fill="none"/><path d="M1063.826,494.365 L1066.126,491.297 L1063.826,488.229 L1071.495,491.297 L1063.826,494.365" fill="#000"/><ellipse cx="972.5" cy="491.297" rx="3" ry="3" fill="#000" style="stroke:#000;stroke-width:1;"/><path d="M724.5,482.297 L737.5,482.297 C770.403,482.297 806.703,483.867 837.82,485.696" style="stroke:#000;stroke-width:1;stroke-dasharray:3,3;" fill="none"/><path d="M837.632,488.814 L840.159,485.837 L838.008,482.578 L845.615,486.166 L837.632,488.814" fill="#000"/><ellipse cx="724.5" cy="482.297" rx="3" ry="3" fill="#000" style="stroke:#000;stroke-width:1;"/><path d="M519.5,371.297 L532.5,371.297 C567.981,371.297 542.995,418.159 569,442.297 C574.082,447.014 579.803,451.222 585.852,454.965" style="stroke:#000;stroke-width:1;stroke-dasharray:3,3;" fill="none"/><path d="M584.299,457.636 L587.855,456.13 L587.405,452.295 L592.529,458.848 L584.299,457.636" fill="#000"/><ellipse cx="519.5" cy="371.297" rx="3" ry="3" fill="#000" style="stroke:#000;stroke-width:1;"/><?plantuml-src xLHDRzim3BthLn3UOQUcRLOCQ4_fnxBBDXHBxu8iqx5MoT8aUal-VQdOhjrYE-HQr801F_AHr1D9hnAfI7lbh11ao29iA7QQkeZWQw06uRhwOpJ2sbWKukCtbGXk6zIFS0LdbulpyyNoRFbPY0-DsJQMNu8YelREOLjX9LrDnGjdgnoce3Ic0awFu_ho5shILgNqlsYHiMghX7GbW9yJA4k_ctrAvoiSy40UK5NAnYUQK2u_eS1b__euOmSVP-oa6tHgmbt2ECjG6qiO1s36B6RR-eYISYWPBLCNwwntS5lZp5Z2TnGwadLkH6z9lwryaVRGJMduEaR5nEmeLGXpd5WBDQDb7x1NEjtsU7NA6fMuqSMcOQdOGgRamM3MezfYCHvjtfW-k7Syw-zXY3vW93FewuslUYZ-RNs5yw5-JYRuhdR6TGxMg0x3-wDp9KRWQl30aWl1tQYaPkcQsv-Z7tYslznlliB1aDrWsiF4VxgxDRI_k-5fMd7sVZjMHsxA-qAyByIRNeZ-nx-uB97KnHC0?></g></svg></div><div class="puml dark" style=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" data-diagram-type="YAML" style="width:1225px;height:533px;background:#FFFFFF;" width="1225px" height="533px" viewBox="0 0 1225 533" zoomAndPan="magnify" preserveAspectRatio="xMidYMid meet" contentStyleType="text/css" class="diagram"><?plantuml 1.2026.9beta4?><defs/><g font-family="sans-serif" lengthAdjust="spacing"><g class="title"><text x="503.121" y="32.995" fill="#000" font-size="14" textLength="217.595" font-weight="700">Structure of the Advice File</text></g><rect x="10" y="340.703" width="522.264" height="81.188" fill="#F1F1F1" style="stroke:#F1F1F1;stroke-width:1.5;" rx="5" ry="5"/><text x="15" y="355.698" fill="#000" font-size="14" textLength="101.049" font-weight="700">commandset</text><text x="171.863" y="355.698" fill="#000" font-size="14" textLength="13.351">   </text><line x1="166.863" y1="340.703" x2="166.863" y2="361" style="stroke:#000;stroke-width:1;"/><line x1="10" y1="361" x2="532.264" y2="361" style="stroke:#000;stroke-width:1;"/><text x="15" y="375.995" fill="#000" font-size="14" textLength="97.426" font-weight="700">namespaces</text><text x="171.863" y="375.995" fill="#000" font-size="14" textLength="13.351">   </text><line x1="166.863" y1="361" x2="166.863" y2="381.297" style="stroke:#000;stroke-width:1;"/><rect x="11.5" y="381.297" width="520.264" height="20.297" fill="#CCFF02" style="stroke:#CCFF02;stroke-width:1;" rx="2" ry="2"/><line x1="10" y1="381.297" x2="532.264" y2="381.297" style="stroke:#000;stroke-width:1;"/><text x="15" y="396.292" fill="#000" font-size="14" textLength="146.863" font-weight="700">recommended_mft</text><text x="171.863" y="396.292" fill="#000" font-size="14" textLength="355.4">Recommended Maximum Feature Number per Tile</text><line x1="166.863" y1="381.297" x2="166.863" y2="401.594" style="stroke:#000;stroke-width:1;"/><line x1="10" y1="401.594" x2="532.264" y2="401.594" style="stroke:#000;stroke-width:1;"/><text x="15" y="416.589" fill="#000" font-size="14" textLength="112.786" font-weight="700">used_crs_code</text><text x="171.863" y="416.589" fill="#000" font-size="14" textLength="260.442">The EPSG code used in the 3DCityDB</text><line x1="166.863" y1="401.594" x2="166.863" y2="421.891" style="stroke:#000;stroke-width:1;"/><rect x="10" y="340.703" width="522.264" height="81.188" fill="none" style="stroke:#000;stroke-width:1.5;" rx="5" ry="5"/><rect x="569" y="47.297" width="189.888" height="385.641" fill="#F1F1F1" style="stroke:#F1F1F1;stroke-width:1.5;" rx="5" ry="5"/><text x="574" y="62.292" fill="#000" font-size="14" textLength="34.624">bbox</text><line x1="569" y1="67.594" x2="758.888" y2="67.594" style="stroke:#000;stroke-width:1;"/><text x="574" y="82.589" fill="#000" font-size="14" textLength="81.327">bbox_mode</text><line x1="569" y1="87.891" x2="758.888" y2="87.891" style="stroke:#000;stroke-width:1;"/><text x="574" y="102.886" fill="#000" font-size="14" textLength="69.877">command</text><line x1="569" y1="108.188" x2="758.888" y2="108.188" style="stroke:#000;stroke-width:1;"/><text x="574" y="123.183" fill="#000" font-size="14" textLength="54.995">db_host</text><line x1="569" y1="128.484" x2="758.888" y2="128.484" style="stroke:#000;stroke-width:1;"/><text x="574" y="143.479" fill="#000" font-size="14" textLength="64.477">db_name</text><line x1="569" y1="148.781" x2="758.888" y2="148.781" style="stroke:#000;stroke-width:1;"/><text x="574" y="163.776" fill="#000" font-size="14" textLength="91.485">db_password</text><line x1="569" y1="169.078" x2="758.888" y2="169.078" style="stroke:#000;stroke-width:1;"/><text x="574" y="184.073" fill="#000" font-size="14" textLength="53.471">db_port</text><line x1="569" y1="189.375" x2="758.888" y2="189.375" style="stroke:#000;stroke-width:1;"/><text x="574" y="204.37" fill="#000" font-size="14" textLength="79.468">db_schema</text><line x1="569" y1="209.672" x2="758.888" y2="209.672" style="stroke:#000;stroke-width:1;"/><text x="574" y="224.667" fill="#000" font-size="14" textLength="95.013">db_username</text><line x1="569" y1="229.969" x2="758.888" y2="229.969" style="stroke:#000;stroke-width:1;"/><text x="574" y="244.964" fill="#000" font-size="14" textLength="32.566">filter</text><line x1="569" y1="250.266" x2="758.888" y2="250.266" style="stroke:#000;stroke-width:1;"/><text x="574" y="265.261" fill="#000" font-size="14" textLength="12.776">id</text><line x1="569" y1="270.563" x2="758.888" y2="270.563" style="stroke:#000;stroke-width:1;"/><text x="574" y="285.558" fill="#000" font-size="14" textLength="179.888">ignore_thematic_surfaces</text><line x1="569" y1="290.859" x2="758.888" y2="290.859" style="stroke:#000;stroke-width:1;"/><text x="574" y="305.854" fill="#000" font-size="14" textLength="30.796">limit</text><line x1="569" y1="311.156" x2="758.888" y2="311.156" style="stroke:#000;stroke-width:1;"/><text x="574" y="326.151" fill="#000" font-size="14" textLength="74.498">output_file</text><line x1="569" y1="331.453" x2="758.888" y2="331.453" style="stroke:#000;stroke-width:1;"/><text x="574" y="346.448" fill="#000" font-size="14" textLength="59.637">sql_filter</text><line x1="569" y1="351.75" x2="758.888" y2="351.75" style="stroke:#000;stroke-width:1;"/><text x="574" y="366.745" fill="#000" font-size="14" textLength="78.155">start_index</text><line x1="569" y1="372.047" x2="758.888" y2="372.047" style="stroke:#000;stroke-width:1;"/><text x="574" y="387.042" fill="#000" font-size="14" textLength="60.99">tiler_app</text><line x1="569" y1="392.344" x2="758.888" y2="392.344" style="stroke:#000;stroke-width:1;"/><text x="574" y="407.339" fill="#000" font-size="14" textLength="73.76">tilers_path</text><line x1="569" y1="412.641" x2="758.888" y2="412.641" style="stroke:#000;stroke-width:1;"/><text x="574" y="427.636" fill="#000" font-size="14" textLength="77.978">type_name</text><rect x="569" y="47.297" width="189.888" height="385.641" fill="none" style="stroke:#000;stroke-width:1.5;" rx="5" ry="5"/><rect x="592.5" y="451.797" width="142.836" height="60.891" fill="#F1F1F1" style="stroke:#F1F1F1;stroke-width:1.5;" rx="5" ry="5"/><text x="597.5" y="466.792" fill="#000" font-size="14" textLength="13.351">   </text><line x1="592.5" y1="472.094" x2="735.336" y2="472.094" style="stroke:#000;stroke-width:1;"/><text x="597.5" y="487.089" fill="#000" font-size="14" textLength="13.351">   </text><line x1="592.5" y1="492.391" x2="735.336" y2="492.391" style="stroke:#000;stroke-width:1;"/><text x="597.5" y="507.386" fill="#000" font-size="14" textLength="132.836">recommended_mft</text><rect x="592.5" y="451.797" width="142.836" height="60.891" fill="none" style="stroke:#000;stroke-width:1.5;" rx="5" ry="5"/><rect x="796" y="443.148" width="237.779" height="20.297" fill="#F1F1F1" style="stroke:#F1F1F1;stroke-width:1.5;" rx="5" ry="5"/><text x="801" y="458.144" fill="#000" font-size="14" textLength="36.825" font-weight="700">alias</text><text x="847.825" y="458.144" fill="#000" font-size="14" textLength="180.954">Shorten name of package</text><line x1="842.825" y1="443.148" x2="842.825" y2="463.445" style="stroke:#000;stroke-width:1;"/><rect x="796" y="443.148" width="237.779" height="20.297" fill="none" style="stroke:#000;stroke-width:1.5;" rx="5" ry="5"/><rect x="845.5" y="481.148" width="139.314" height="20.297" fill="#F1F1F1" style="stroke:#F1F1F1;stroke-width:1.5;" rx="5" ry="5"/><text x="850.5" y="496.144" fill="#000" font-size="14" textLength="105.964" font-weight="700">objectclasses</text><text x="966.464" y="496.144" fill="#000" font-size="14" textLength="13.351">   </text><line x1="961.464" y1="481.148" x2="961.464" y2="501.445" style="stroke:#000;stroke-width:1;"/><rect x="845.5" y="481.148" width="139.314" height="20.297" fill="none" style="stroke:#000;stroke-width:1.5;" rx="5" ry="5"/><rect x="1071" y="460.797" width="142.836" height="60.891" fill="#F1F1F1" style="stroke:#F1F1F1;stroke-width:1.5;" rx="5" ry="5"/><text x="1076" y="475.792" fill="#000" font-size="14" textLength="39.703">name</text><line x1="1071" y1="481.094" x2="1213.836" y2="481.094" style="stroke:#000;stroke-width:1;"/><text x="1076" y="496.089" fill="#000" font-size="14" textLength="71.75">properties</text><line x1="1071" y1="501.391" x2="1213.836" y2="501.391" style="stroke:#000;stroke-width:1;"/><text x="1076" y="516.386" fill="#000" font-size="14" textLength="132.836">recommended_mft</text><rect x="1071" y="460.797" width="142.836" height="60.891" fill="none" style="stroke:#000;stroke-width:1.5;" rx="5" ry="5"/><path d="M519.5,351.297 L532.5,351.297 C542.833,351.297 552.77,349.262 562.228,345.742" style="stroke:#000;stroke-width:1;stroke-dasharray:3,3;" fill="none"/><path d="M563.417,348.598 L564.369,344.851 L561.04,342.887 L569.366,342.771 L563.417,348.598" fill="#000"/><ellipse cx="519.5" cy="351.297" rx="3" ry="3" fill="#000" style="stroke:#000;stroke-width:1;"/><path d="M724.5,462.297 L737.5,462.297 C754.043,462.297 771.445,461.9 788.614,461.273" style="stroke:#000;stroke-width:1;stroke-dasharray:3,3;" fill="none"/><path d="M788.736,464.42 L790.975,461.182 L788.493,458.125 L796.483,460.969 L788.736,464.42" fill="#000"/><ellipse cx="724.5" cy="462.297" rx="3" ry="3" fill="#000" style="stroke:#000;stroke-width:1;"/><path d="M972.5,491.297 L985.5,491.297 C1010.985,491.297 1038.804,491.297 1063.826,491.297" style="stroke:#000;stroke-width:1;stroke-dasharray:3,3;" fill="none"/><path d="M1063.826,494.365 L1066.126,491.297 L1063.826,488.229 L1071.495,491.297 L1063.826,494.365" fill="#000"/><ellipse cx="972.5" cy="491.297" rx="3" ry="3" fill="#000" style="stroke:#000;stroke-width:1;"/><path d="M724.5,482.297 L737.5,482.297 C770.403,482.297 806.703,483.867 837.82,485.696" style="stroke:#000;stroke-width:1;stroke-dasharray:3,3;" fill="none"/><path d="M837.632,488.814 L840.159,485.837 L838.008,482.578 L845.615,486.166 L837.632,488.814" fill="#000"/><ellipse cx="724.5" cy="482.297" rx="3" ry="3" fill="#000" style="stroke:#000;stroke-width:1;"/><path d="M519.5,371.297 L532.5,371.297 C567.981,371.297 542.995,418.159 569,442.297 C574.082,447.014 579.803,451.222 585.852,454.965" style="stroke:#000;stroke-width:1;stroke-dasharray:3,3;" fill="none"/><path d="M584.299,457.636 L587.855,456.13 L587.405,452.295 L592.529,458.848 L584.299,457.636" fill="#000"/><ellipse cx="519.5" cy="371.297" rx="3" ry="3" fill="#000" style="stroke:#000;stroke-width:1;"/><?plantuml-src xLHDRzim3BthLn3UOQUcRLOCQ4_fnxBBDXHBxu8iqx5MoT8aUal-VQdOhjrYE-HQr801F_AHr1D9hnAfI7lbh11ao29iA7QQkeZWQw06uRhwOpJ2sbWKukCtbGXk6zIFS0LdbulpyyNoRFbPY0-DsJQMNu8YelREOLjX9LrDnGjdgnoce3Ic0awFu_ho5shILgNqlsYHiMghX7GbW9yJA4k_ctrAvoiSy40UK5NAnYUQK2u_eS1b__euOmSVP-oa6tHgmbt2ECjG6qiO1s36B6RR-eYISYWPBLCNwwntS5lZp5Z2TnGwadLkH6z9lwryaVRGJMduEaR5nEmeLGXpd5WBDQDb7x1NEjtsU7NA6fMuqSMcOQdOGgRamM3MezfYCHvjtfW-k7Syw-zXY3vW93FewuslUYZ-RNs5yw5-JYRuhdR6TGxMg0x3-wDp9KRWQl30aWl1tQYaPkcQsv-Z7tYslznlliB1aDrWsiF4VxgxDRI_k-5fMd7sVZjMHsxA-qAyByIRNeZ-nx-uB97KnHC0?></g></svg></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.tabs.link", "content.code.copy", "content.code.select"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../assets/mkdocs_puml/puml.js"></script>
+      
+        <script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+      
+        <script src="../../assets/mkdocs_puml/interaction.js"></script>
+      
+    
+  </body>
+</html>
