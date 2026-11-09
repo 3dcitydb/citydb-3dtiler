@@ -43,6 +43,7 @@ def generate_tiles(args, table, geom_column, shaders_column, output_folder=None,
         "--use_implicit_tiling", f"{implicit_tiling_option}"
     ]
     # print(command)
+    # print(mypass)
     # Run the command set above
     sent_command = subprocess.run(
         command, 

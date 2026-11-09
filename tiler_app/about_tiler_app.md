@@ -1,4 +1,4 @@
 # About the tiler app implementation
 
 - For the testing purposes selected tiler app stored here.
-- Current version : 2.26.0
+- Current version : 2.28.0
