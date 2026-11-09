@@ -55,9 +55,10 @@ endheader
 ***_ default: tiler_app
 ***_ any-other-directory
 
+**[#burlywood] <&cog> --ignore-thematic-surfaces
+
 **[#skyblue] <&magnifying-glass> advise
 ***[#darkseagreen] <&medical-cross> --help / -h
-***[#burlywood] <&cog> --ignore-thematic-surfaces
 ***[#burlywood] <&cog> --output-file / -o
 ****_ <&star> advice.yml
 ****_ any-other-file-name
