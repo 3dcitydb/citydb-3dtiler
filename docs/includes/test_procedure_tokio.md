@@ -1,14 +1,19 @@
 # Advise
 
 ## T001
+
+```bash
 python3 citydb-3dtiler.py \
 --db-host 172.17.0.2 --db-port 5432 \
 --db-name citydb-visualizer \
 --db-schema citydb \
 --db-username tester --db-password 123456 \
 advise
+```
 
 ## T002
+
+```bash
 python3 citydb-3dtiler.py \
 --db-host 172.17.0.2 --db-port 5432 \
 --db-name citydb-visualizer \
@@ -16,19 +21,24 @@ python3 citydb-3dtiler.py \
 --db-username tester --db-password 123456 \
 --ignore-thematic-surfaces \
 advise
+```
 
 # Tiling
 
 ## T003
+
+```bash
 python3 citydb-3dtiler.py \
 --db-host 172.17.0.2 --db-port 5432 \
 --db-name citydb-visualizer \
 --db-schema citydb \
 --db-username tester --db-password 123456 \
 tile
+```
 
 ## T004
 
+```bash
 python3 citydb-3dtiler.py \
 --db-host 172.17.0.2 --db-port 5432 \
 --db-name citydb-visualizer \
@@ -36,9 +46,11 @@ python3 citydb-3dtiler.py \
 --db-username tester --db-password 123456 \
 --ignore-thematic-surfaces \
 tile
+```
 
 ## T005
 
+```bash
 python3 citydb-3dtiler.py \
 --db-host 172.17.0.2 --db-port 5432 \
 --db-name citydb-visualizer \
@@ -47,9 +59,11 @@ python3 citydb-3dtiler.py \
 --id bldg_97287e3a-7844-4b71-b95f-840f8bdf224e,bldg_3fad10e5-8d5c-46b0-83c1-7d23afc798de,bldg_02fcca4c-df92-40b0-9895-9046578e3f1c,bldg_bc1eb1f9-0246-4335-9736-c7888b0f8c85 \
 --type-name Building \
 tile
+```
 
 ## T006
 
+```bash
 python3 citydb-3dtiler.py \
 --db-host 172.17.0.2 --db-port 5432 \
 --db-name citydb-visualizer \
@@ -57,9 +71,11 @@ python3 citydb-3dtiler.py \
 --db-username tester --db-password 123456 \
 --limit 1000 --start-index 3000 \
 tile
+```
 
 ## T007
 
+```bash
 python3 citydb-3dtiler.py \
 --db-host 172.17.0.2 --db-port 5432 \
 --db-name citydb-visualizer \
@@ -67,6 +83,7 @@ python3 citydb-3dtiler.py \
 --db-username tester --db-password 123456 \
 --bbox 139.7496291,35.6608369,139.7568912,35.6651614,6697 \
 tile
+```
 
 ## T008
 ```bash
@@ -149,12 +166,12 @@ tile \
 
 ```bash
 python3 citydb-3dtiler.py \
---db-host 172.17.0.2 --db-port 5432 \
+--db-host 172.17.0.3 --db-port 5432 \
 --db-name citydb-visualizer \
 --db-schema citydb \
 --db-username tester --db-password 123456 \
 tile \
---custom-style tum_colors.csv \
+--custom-style materials_for_features/tum_colors_transparent.csv \
 --transparency blend
 ```
 

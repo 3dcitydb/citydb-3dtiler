@@ -144,4 +144,7 @@ Specify the vertical offset as a float number (for exp. 0.15 / -1.25) in meter u
 
 Assign the vertical offsets using the CSV file. Use the dot as the decimal separator.
 
+??? tip "Default vertical offsets for TrafficArea, AuxiliaryTrafficArea and Markings"
+    There is a predefined +10 cm vertical offset for the TrafficArea and AuxiliaryTrafficArea objects, and a +15 cm vertical offset is also defined for the Marking objects. It is recommended to preserve these values so that the markings remain visible on top of the road objects, and the area objects on top of the other ground surfaces.
+
 - Example : `--vertical-offset-from-csv`

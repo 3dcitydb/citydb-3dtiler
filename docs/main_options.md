@@ -30,3 +30,7 @@ If you want to use a specific version of pg2b3dm that you have determined, you m
 ??? Warning "Some (tile) options might not work in this scenario"
     Since the options of the pg2b3dm application may vary depending on the version, you may not be able to use every argument.
 
+### --ignore-thematic-surfaces
+
+This option used to ignore the thematic surfaces that descend from AbstractThematicSurface, such as WallSurface, WindowSurface etc.
+

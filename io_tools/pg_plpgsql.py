@@ -27,9 +27,9 @@ def copy_materials(args, custom_materials=None):
         text=True
         )
     if sent_command.returncode == 0:
-        print(sent_command.stdout)
+        print("(i) Specified Style File Copied into the DB : ", sent_command.stdout)
     else:
-        print(sent_command.stderr)
+        print("(w) Something went wrong with the specified style file :  ", sent_command.stderr)
 
 def drop_cascade_if_exists(args, table_name):
     mypass['PGPASSWORD']=args.db_password

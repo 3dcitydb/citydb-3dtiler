@@ -6,17 +6,9 @@ edit_uri: "tree/main/docs"
 # exclude_docs: |
 #   /html_documents/
 #   /notebooks/
+# Navigation controlled by the awesome-pages plugin
 nav:
-  - "citydb-3dtiler": index.md
-  - "CLI Overview": cli.md
-  - "Main Options": main_options.md
-  - "Database Con. Options" : db_con_options.md
-  - "Filter Options" : filter_options.md
-  - "advise Command" : advise.md
-  - "tile Command" : tile.md
-  - "Sample Commands" : samples.md
-  - "citydb-3dtiler Docker": docker.md
-  - "Developer Notes" : dev_notes.md
+
 theme: 
   name: material
   logo: ./images/tiles_light.png
@@ -81,6 +73,8 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
 plugins:
+  - search
+  - awesome-pages
   - tags:
       tags: true
   - plantuml:

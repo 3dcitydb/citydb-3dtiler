@@ -1,15 +1,13 @@
-# Structure of the Advice file in YAML Format
+# Structure of the Advice file (YAML)
 
 ```puml
 @startyaml
 
 title Structure of the Advice File
 
-'Last Check : 09.11.2026
-
-#highlight "recommended_mft"
-#highlight "namespaces" / "recommended_mft"
 #highlight "namespaces" / "objectclasses" / "recommended_mft"
+#highlight "namespaces" / "recommended_mft"
+#highlight "recommended_mft"
 
 commandset:
     - bbox
@@ -32,13 +30,13 @@ commandset:
     - tilers_path
     - type_name
 namespaces:
-    - alias : "Shorten name of package"
+    - alias
     - objectclasses:
         - name
         - properties
         - recommended_mft
     - recommended_mft
-recommended_mft : "Recommended Maximum Feature Number per Tile"
+recommended_mft : "Recommended Maximum Feature Number per Tile (MFT)"
 used_crs_code : "The EPSG code used in the 3DCityDB"
 
 @endyaml
