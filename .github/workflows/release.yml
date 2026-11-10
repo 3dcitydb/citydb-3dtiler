@@ -6,7 +6,7 @@ on:
 
 env:
   # Docker Hub repository name
-  DOCKERHUB_REPO: ${{ secrets.DOCKERHUB_USERNAME }}/citydb-3dtiler
+  DOCKERHUB_REPO: tumgis/citydb-3dtiler
   # GHCR repository name for tum-gis organization
   GHCR_REPO: ghcr.io/3dcitydb/citydb-3dtiler
 
