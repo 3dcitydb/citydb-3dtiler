@@ -1,6 +1,7 @@
 # Ignore Folders
 .*
 env
+.env-dev
 sources
 site
 __pycache__
