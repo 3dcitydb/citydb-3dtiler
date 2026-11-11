@@ -61,6 +61,7 @@ Test procedures are usually handled before publishing a new release.
 
 - Before release 0.9.5
     - [Tests done with Tokio Takeshiba dataset](https://www.3dcitydb.net/3dcitydb/fileadmin/public/kendir/#tokio_cg3_2023){:target="_blank"}
+    - [Used Commands and Previews](test_procedure_tokio.md)
 - Before release 0.9.3
     - [Tests done with Swisstopo dataset](https://www.3dcitydb.net/3dcitydb/fileadmin/public/kendir/#bern_full_procedure){:target="_blank"}
 - Before release 0.9.2
